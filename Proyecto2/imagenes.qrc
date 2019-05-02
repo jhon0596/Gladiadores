@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>caminoCurvaHV.jpg</file>
+        <file>caminoCurvaVH.jpg</file>
+        <file>caminoT.jpg</file>
+        <file>caminoTHorizontalArriba.jpg</file>
+        <file>caminoTizquierda.jpg</file>
+        <file>caminoTVerticalAbajo.jpg</file>
+        <file>caminoUnionVH.jpg</file>
+        <file>torreExplosiva.png</file>
+        <file>torreFuego.png</file>
+        <file>torreSencilla.png</file>
+    </qresource>
+</RCC>
