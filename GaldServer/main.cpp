@@ -1,9 +1,9 @@
 #include <iostream>
 
 
-#include "Gladiador.h"
+#include "objects/Gladiador.h"
 #include <bits/stdc++.h>
-#include "Utilities.h"
+#include "utilities/Utilities.h"
 #include <boost/asio.hpp>
 #include "Server.h"
 

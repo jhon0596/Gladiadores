@@ -18,7 +18,7 @@ if(Boost_FOUND)
 endif()
 
 
-add_executable(GaldServer main.cpp Gladiador.cpp Gladiador.h Utilities.cpp Utilities.h con_handler.cpp con_handler.h Server.cpp Server.h Simulacion.cpp Simulacion.h Torre.cpp Torre.h)
+add_executable(GaldServer main.cpp objects/Gladiador.cpp objects/Gladiador.h utilities/Utilities.cpp utilities/Utilities.h con_handler.cpp con_handler.h Server.cpp Server.h Simulacion.cpp Simulacion.h objects/Torre.cpp objects/Torre.h objects/factory.cpp objects/factory.h objects/objetoMatriz.cpp objects/objetoMatriz.h)
 target_link_libraries(${PROJECT_NAME} ${CMAKE_THREAD_LIBS_INIT})
 
 if(Boost_FOUND)

@@ -5,10 +5,10 @@
 #ifndef GALDSERVER_SIMULACION_H
 #define GALDSERVER_SIMULACION_H
 
-#include "Gladiador.h"
-#include "Torre.h"
+#include "objects/Gladiador.h"
+#include "objects/Torre.h"
 #include "boost/property_tree/ptree.hpp"
-#include "ListaTorres.h"
+#include "dataStructure/ListaTorres.h"
 #include "boost/property_tree/xml_parser.hpp"
 
 
