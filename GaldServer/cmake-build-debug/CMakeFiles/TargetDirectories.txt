@@ -1,0 +1,3 @@
+/home/manu5535/Documents/Qt/Gladiadores/GaldServer/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/manu5535/Documents/Qt/Gladiadores/GaldServer/cmake-build-debug/CMakeFiles/GaldServer.dir
+/home/manu5535/Documents/Qt/Gladiadores/GaldServer/cmake-build-debug/CMakeFiles/edit_cache.dir
