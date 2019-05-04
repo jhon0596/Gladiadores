@@ -5,7 +5,7 @@
 #include "con_handler.h"
 #include "Simulacion.h"
 
-
+Simulacion s1 =Simulacion();
 
 con_handler::pointer con_handler::create(boost::asio::io_service &io_service) {
     return pointer(new con_handler(io_service));
@@ -32,7 +32,7 @@ void con_handler::start() {
     operaciones();
 
 
-
+    this->data ="";
 
 
 }
@@ -57,7 +57,8 @@ void con_handler::handle_write(const boost::system::error_code &err, size_t byte
 
 void con_handler::operaciones() {
 
-    Simulacion s1 =Simulacion();
+    s1.crearTorres();
+
 
 
     this->message=s1.getTorre()+"\n";

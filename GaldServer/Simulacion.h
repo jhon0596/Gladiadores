@@ -7,7 +7,9 @@
 
 #include "Gladiador.h"
 #include "Torre.h"
-
+#include "boost/property_tree/ptree.hpp"
+#include "ListaTorres.h"
+#include "boost/property_tree/xml_parser.hpp"
 
 
 class Simulacion {
@@ -16,9 +18,11 @@ public:
     void  crearTorres();
     void crearGladiadores();
     const std::string &getGlad() const;
-
-    const std::string &getTorre() const;
+    ListaTorres lt;
+     std::string &getTorre() ;
 private:
+
+
     std::string glad,torre;
 };
 

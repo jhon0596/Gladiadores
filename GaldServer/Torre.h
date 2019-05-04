@@ -16,6 +16,12 @@ public:
 
 private:
     int dano,pos,idTor,alcance;
+public:
+    int getPos() const;
+
+    const std::string &getTipo() const;
+
+private:
     std::string tipo ;
 
 
