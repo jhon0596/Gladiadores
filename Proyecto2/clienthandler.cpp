@@ -7,7 +7,7 @@ void clientHandler::send2Server(std::string dta) {
     //connection
     socket.connect( tcp::endpoint( boost::asio::ip::address::from_string("127.0.0.1"), 1234 ));
     // request/message from client
-    const string msg = dta;
+    const string msg = dta+"\r";
     boost::system::error_code error;
     boost::asio::write( socket, boost::asio::buffer(msg), error );
     if( !error ) {
@@ -25,11 +25,11 @@ void clientHandler::send2Server(std::string dta) {
     else {
         const char* data = boost::asio::buffer_cast<const char*>(receive_buffer.data());
         p =data;
-        int pos = p.find(",");
+        /*int pos = p.find(",");
         string sub1 = p.substr(pos-1);
         string sub2 = p.substr(pos+1);
         a = std::atoi(sub1.c_str());
-        b = std::atoi(sub2.c_str());
+        b = std::atoi(sub2.c_str());*/
         cout << p << endl;
 
 
