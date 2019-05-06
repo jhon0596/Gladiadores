@@ -71,7 +71,11 @@ CMAKE_BINARY_DIR = /home/aerojasm/Documents/Gladiadores/GaldServer/cmake-build-d
 CMakeFiles/GaldServer.dir/all:
 	$(MAKE) -f CMakeFiles/GaldServer.dir/build.make CMakeFiles/GaldServer.dir/depend
 	$(MAKE) -f CMakeFiles/GaldServer.dir/build.make CMakeFiles/GaldServer.dir/build
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aerojasm/Documents/Gladiadores/GaldServer/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target GaldServer"
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/manu5535/Documents/Qt/Gladiadores/GaldServer/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target GaldServer"
+>>>>>>> Manuel
 .PHONY : CMakeFiles/GaldServer.dir/all
 
 # Include target in all.
@@ -81,7 +85,11 @@ all: CMakeFiles/GaldServer.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/GaldServer.dir/rule: cmake_check_build_system
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/aerojasm/Documents/Gladiadores/GaldServer/cmake-build-debug/CMakeFiles 10
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/manu5535/Documents/Qt/Gladiadores/GaldServer/cmake-build-debug/CMakeFiles 10
+>>>>>>> Manuel
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/GaldServer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/aerojasm/Documents/Gladiadores/GaldServer/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/GaldServer.dir/rule

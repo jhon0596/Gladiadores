@@ -129,6 +129,7 @@
 		<Unit filename="/home/aerojasm/Documents/Gladiadores/GaldServer/objects/objetoMatriz.h">
 			<Option target="GaldServer"/>
 		</Unit>
+<<<<<<< HEAD
 		<Unit filename="/home/aerojasm/Documents/Gladiadores/GaldServer/utilities/Utilities.cpp">
 			<Option target="GaldServer"/>
 		</Unit>
@@ -136,6 +137,15 @@
 			<Option target="GaldServer"/>
 		</Unit>
 		<Unit filename="/home/aerojasm/Documents/Gladiadores/GaldServer/CMakeLists.txt">
+=======
+		<Unit filename="/home/manu5535/Documents/Qt/Gladiadores/GaldServer/utilities/Utilities.cpp">
+			<Option target="GaldServer"/>
+		</Unit>
+		<Unit filename="/home/manu5535/Documents/Qt/Gladiadores/GaldServer/utilities/Utilities.h">
+			<Option target="GaldServer"/>
+		</Unit>
+		<Unit filename="/home/manu5535/Documents/Qt/Gladiadores/GaldServer/CMakeLists.txt">
+>>>>>>> Manuel
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
