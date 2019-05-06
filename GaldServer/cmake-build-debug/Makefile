@@ -339,33 +339,6 @@ objects/objetoMatriz.cpp.s:
 	$(MAKE) -f CMakeFiles/GaldServer.dir/build.make CMakeFiles/GaldServer.dir/objects/objetoMatriz.cpp.s
 .PHONY : objects/objetoMatriz.cpp.s
 
-objects/torreSimple.o: objects/torreSimple.cpp.o
-
-.PHONY : objects/torreSimple.o
-
-# target to build an object file
-objects/torreSimple.cpp.o:
-	$(MAKE) -f CMakeFiles/GaldServer.dir/build.make CMakeFiles/GaldServer.dir/objects/torreSimple.cpp.o
-.PHONY : objects/torreSimple.cpp.o
-
-objects/torreSimple.i: objects/torreSimple.cpp.i
-
-.PHONY : objects/torreSimple.i
-
-# target to preprocess a source file
-objects/torreSimple.cpp.i:
-	$(MAKE) -f CMakeFiles/GaldServer.dir/build.make CMakeFiles/GaldServer.dir/objects/torreSimple.cpp.i
-.PHONY : objects/torreSimple.cpp.i
-
-objects/torreSimple.s: objects/torreSimple.cpp.s
-
-.PHONY : objects/torreSimple.s
-
-# target to generate assembly for a file
-objects/torreSimple.cpp.s:
-	$(MAKE) -f CMakeFiles/GaldServer.dir/build.make CMakeFiles/GaldServer.dir/objects/torreSimple.cpp.s
-.PHONY : objects/torreSimple.cpp.s
-
 utilities/Utilities.o: utilities/Utilities.cpp.o
 
 .PHONY : utilities/Utilities.o
@@ -426,9 +399,6 @@ help:
 	@echo "... objects/objetoMatriz.o"
 	@echo "... objects/objetoMatriz.i"
 	@echo "... objects/objetoMatriz.s"
-	@echo "... objects/torreSimple.o"
-	@echo "... objects/torreSimple.i"
-	@echo "... objects/torreSimple.s"
 	@echo "... utilities/Utilities.o"
 	@echo "... utilities/Utilities.i"
 	@echo "... utilities/Utilities.s"

@@ -12,7 +12,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/manu5535/Documents/Qt/Gladiadores/GaldServer/objects/Torre.cpp" "/home/manu5535/Documents/Qt/Gladiadores/GaldServer/cmake-build-debug/CMakeFiles/GaldServer.dir/objects/Torre.cpp.o"
   "/home/manu5535/Documents/Qt/Gladiadores/GaldServer/objects/factory.cpp" "/home/manu5535/Documents/Qt/Gladiadores/GaldServer/cmake-build-debug/CMakeFiles/GaldServer.dir/objects/factory.cpp.o"
   "/home/manu5535/Documents/Qt/Gladiadores/GaldServer/objects/objetoMatriz.cpp" "/home/manu5535/Documents/Qt/Gladiadores/GaldServer/cmake-build-debug/CMakeFiles/GaldServer.dir/objects/objetoMatriz.cpp.o"
-  "/home/manu5535/Documents/Qt/Gladiadores/GaldServer/objects/torreSimple.cpp" "/home/manu5535/Documents/Qt/Gladiadores/GaldServer/cmake-build-debug/CMakeFiles/GaldServer.dir/objects/torreSimple.cpp.o"
   "/home/manu5535/Documents/Qt/Gladiadores/GaldServer/utilities/Utilities.cpp" "/home/manu5535/Documents/Qt/Gladiadores/GaldServer/cmake-build-debug/CMakeFiles/GaldServer.dir/utilities/Utilities.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

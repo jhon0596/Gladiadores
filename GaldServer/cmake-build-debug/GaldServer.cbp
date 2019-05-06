@@ -129,12 +129,6 @@
 		<Unit filename="/home/manu5535/Documents/Qt/Gladiadores/GaldServer/objects/objetoMatriz.h">
 			<Option target="GaldServer"/>
 		</Unit>
-		<Unit filename="/home/manu5535/Documents/Qt/Gladiadores/GaldServer/objects/torreSimple.cpp">
-			<Option target="GaldServer"/>
-		</Unit>
-		<Unit filename="/home/manu5535/Documents/Qt/Gladiadores/GaldServer/objects/torreSimple.h">
-			<Option target="GaldServer"/>
-		</Unit>
 		<Unit filename="/home/manu5535/Documents/Qt/Gladiadores/GaldServer/utilities/Utilities.cpp">
 			<Option target="GaldServer"/>
 		</Unit>
