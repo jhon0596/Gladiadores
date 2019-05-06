@@ -28,12 +28,18 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     matriz.cpp \
-    nodo_matriz.cpp
+    nodo_matriz.cpp \
+    backtrack.cpp \
+    lista.cpp \
+    listanodo.cpp
 
 HEADERS += \
         mainwindow.h \
     matriz.h \
-    nodo_matriz.h
+    nodo_matriz.h \
+    backtrack.h \
+    lista.h \
+    listanodo.h
 
 FORMS += \
         mainwindow.ui

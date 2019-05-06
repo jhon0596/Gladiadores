@@ -8,7 +8,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/GaldServer.dir/objects/Torre.cpp.o"
   "CMakeFiles/GaldServer.dir/objects/factory.cpp.o"
   "CMakeFiles/GaldServer.dir/objects/objetoMatriz.cpp.o"
-  "CMakeFiles/GaldServer.dir/objects/torreSimple.cpp.o"
   "GaldServer.pdb"
   "GaldServer"
 )

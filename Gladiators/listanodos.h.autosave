@@ -1,0 +1,12 @@
+#ifndef LISTANODOS_H
+#define LISTANODOS_H
+
+
+class ListaNodos
+{
+public:
+    ListaNodos();
+    void enqu
+};
+
+#endif // LISTANODOS_H
