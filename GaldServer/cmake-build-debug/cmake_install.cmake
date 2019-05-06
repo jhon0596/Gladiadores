@@ -1,4 +1,4 @@
-# Install script for directory: /home/manu5535/Documents/Qt/Gladiadores/GaldServer
+# Install script for directory: /home/aerojasm/Documents/Gladiadores/GaldServer
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/manu5535/Documents/Qt/Gladiadores/GaldServer/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/aerojasm/Documents/Gladiadores/GaldServer/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

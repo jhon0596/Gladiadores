@@ -48,10 +48,10 @@ RM = /opt/clion-2018.3.4/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/manu5535/Documents/Qt/Gladiadores/GaldServer
+CMAKE_SOURCE_DIR = /home/aerojasm/Documents/Gladiadores/GaldServer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/manu5535/Documents/Qt/Gladiadores/GaldServer/cmake-build-debug
+CMAKE_BINARY_DIR = /home/aerojasm/Documents/Gladiadores/GaldServer/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/manu5535/Documents/Qt/Gladiadores/GaldServer/cmake-build-debug/CMakeFiles /home/manu5535/Documents/Qt/Gladiadores/GaldServer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aerojasm/Documents/Gladiadores/GaldServer/cmake-build-debug/CMakeFiles /home/aerojasm/Documents/Gladiadores/GaldServer/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/manu5535/Documents/Qt/Gladiadores/GaldServer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aerojasm/Documents/Gladiadores/GaldServer/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -339,33 +339,6 @@ objects/objetoMatriz.cpp.s:
 	$(MAKE) -f CMakeFiles/GaldServer.dir/build.make CMakeFiles/GaldServer.dir/objects/objetoMatriz.cpp.s
 .PHONY : objects/objetoMatriz.cpp.s
 
-objects/torreSimple.o: objects/torreSimple.cpp.o
-
-.PHONY : objects/torreSimple.o
-
-# target to build an object file
-objects/torreSimple.cpp.o:
-	$(MAKE) -f CMakeFiles/GaldServer.dir/build.make CMakeFiles/GaldServer.dir/objects/torreSimple.cpp.o
-.PHONY : objects/torreSimple.cpp.o
-
-objects/torreSimple.i: objects/torreSimple.cpp.i
-
-.PHONY : objects/torreSimple.i
-
-# target to preprocess a source file
-objects/torreSimple.cpp.i:
-	$(MAKE) -f CMakeFiles/GaldServer.dir/build.make CMakeFiles/GaldServer.dir/objects/torreSimple.cpp.i
-.PHONY : objects/torreSimple.cpp.i
-
-objects/torreSimple.s: objects/torreSimple.cpp.s
-
-.PHONY : objects/torreSimple.s
-
-# target to generate assembly for a file
-objects/torreSimple.cpp.s:
-	$(MAKE) -f CMakeFiles/GaldServer.dir/build.make CMakeFiles/GaldServer.dir/objects/torreSimple.cpp.s
-.PHONY : objects/torreSimple.cpp.s
-
 utilities/Utilities.o: utilities/Utilities.cpp.o
 
 .PHONY : utilities/Utilities.o
@@ -426,9 +399,6 @@ help:
 	@echo "... objects/objetoMatriz.o"
 	@echo "... objects/objetoMatriz.i"
 	@echo "... objects/objetoMatriz.s"
-	@echo "... objects/torreSimple.o"
-	@echo "... objects/torreSimple.i"
-	@echo "... objects/torreSimple.s"
 	@echo "... utilities/Utilities.o"
 	@echo "... utilities/Utilities.i"
 	@echo "... utilities/Utilities.s"

@@ -85,7 +85,8 @@ void Matriz::printMatriz()
     {
         for(int j = 0; j<y; j++)
         {
-            std::cout<< current->getX() << "," << current->getY()<< " ";
+            //std::cout<< current->getX() << "," << current->getY()<< " ";
+            std::cout<< current->getFlag()<< " ";
             current = current->getRight();
         }
         if (i != (x-1))
@@ -96,4 +97,35 @@ void Matriz::printMatriz()
         }else{std::cout<< "\n";}
     }
     std::cout<< "\n";
+}
+
+void Matriz::setObstacle(int x, int y)
+{
+    Nodo_Matriz *current = start;
+    for (int i = 0; i < x;i++) {
+        current = current->getBottom();
+    }
+    for (int j = 0; j < y; j++) {
+        current = current->getRight();
+    }
+
+    current->setFlag(true);
+}
+
+Nodo_Matriz *Matriz::getStart()
+{
+    return start;
+}
+
+Nodo_Matriz *Matriz::getNodo(int x, int y)
+{
+    Nodo_Matriz *current = start;
+    for (int i = 0; i < x;i++) {
+        current = current->getBottom();
+    }
+    for (int j = 0; j < y; j++) {
+        current = current->getRight();
+    }
+
+    return current;
 }

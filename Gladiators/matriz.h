@@ -37,6 +37,24 @@ public:
      * @param y int posicion y
      */
     void printMatriz();
+    /**
+     * @brief set setea un nodo como obstaculo
+     * @param int x
+     * @param int y
+     */
+    void setObstacle(int x, int y);
+    /**
+     * @brief getStart, devuelve el nodo 0,0 de la matriz
+     * @return Nodo_Matriz*
+     */
+    Nodo_Matriz* getStart();
+    /**
+     * @brief getNodo devuelve el nodo en la posicion x,y especificada
+     * @param x
+     * @param y
+     * @return Nodo_Matriz*
+     */
+    Nodo_Matriz* getNodo(int x, int y);
 };
 
 #endif // MATRIZ_H
