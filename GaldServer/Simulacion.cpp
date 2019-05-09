@@ -10,7 +10,7 @@ Simulacion::Simulacion() {
 
 void Simulacion::crearGladiadores() {
     Gladiador g1 =Gladiador("hgh");
-    this->glad=g1.display();
+    this->gladiar=g1.display();
 
 }
 
@@ -25,30 +25,25 @@ void Simulacion::crearTorres() {
 
 }
 
-const std::string &Simulacion::getGlad() const {
-    /*
-     boost::property_tree::ptree torres;
-    torres.put("id","GL");
-        node *tmp=lt.head;
-    for (int i=0;i<lt.getSize();i++){
-        boost::property_tree::ptree  & node= torres.add("Torre","");
-        node.put("t",tmp->gettorre().getTipo());
-        node.put("p",tmp->gettorre().getPos());
+ std::string &Simulacion::getGlad()  {
 
-        tmp=tmp->getNext();
+     boost::property_tree::ptree Gald;
+    Gald.put("id","LG");
+    boost::property_tree::ptree  & node= Gald.add("lista.gladiador","");
+    node.put("e",18);
+    node.put("conf",25);
+    node.put("trsup",18);
+    node.put("trinf",25);
+    node.put("emoji",25);
 
-    }
 
-     std::ostringstream buf;
-    boost::property_tree::write_xml(buf, torres, false);
-     torre=buf.str();
-    */
+    std::ostringstream buf;
+    boost::property_tree::write_xml(buf, Gald, false);
+     gladiar=buf.str();
 
 
 
-
-
-    return glad;
+    return gladiar;
 }
 
  std::string &Simulacion::getTorre()  {
@@ -61,8 +56,6 @@ const std::string &Simulacion::getGlad() const {
         boost::property_tree::ptree  & node= torres.add("lista.Torre","");
         node.put("t",tmp->gettorre().getTipo());
         node.put("p",tmp->gettorre().getPos());
-        std::cout << tmp->gettorre().getTipo()<<std::endl;
-        std::cout <<tmp->gettorre().getPos()<<std::endl;
         tmp=tmp->getNext();
 
     }

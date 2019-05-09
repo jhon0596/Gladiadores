@@ -33,7 +33,7 @@ public:
     *@brief  metodo para retornar los gladiadores formato json
 
     * */
-    const std::string &getGlad() const;
+     std::string &getGlad() ;
     /**
     *@brief  lista de torres en la matriz
 
@@ -47,7 +47,7 @@ public:
 private:
 
 
-    std::string glad,torre;
+    std::string torre,gladiar;
 };
 
 

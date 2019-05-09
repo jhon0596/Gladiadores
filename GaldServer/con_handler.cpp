@@ -71,7 +71,7 @@ void con_handler::operaciones() {
                         boost::asio::placeholders::bytes_transferred));
 
 
-  /*  this->message=s1.getGlad()+"\n";
+    this->message=s1.getGlad()+"\n";
     sock.async_write_some(
             boost::asio::buffer(this->message, max_length),
             boost::bind(&con_handler::handle_write,
@@ -80,7 +80,7 @@ void con_handler::operaciones() {
                         boost::asio::placeholders::bytes_transferred));
 
 
-*/
+
 
     this->message="";
 

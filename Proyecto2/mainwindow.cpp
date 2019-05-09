@@ -356,21 +356,18 @@ void MainWindow::leerXML()
     //revisar aqui
 
     if(cl.propSev.get<std::string>("id")=="LT"){
-        //bool flag=true;
         int tip,pos;
         BOOST_FOREACH( ptree::value_type & v,cl.propSev.get_child("lista")){
-
-
             if(v.first=="Torre"){
                 tip=v.second.get<int>("t");
                 pos=v.second.get<int>("p");
                 addTorre(pos,tip);
             }
-
-
-            }
+        }
     }
-
+    else if(cl.propSev.get<std::string>("id")=="LG"){
+        //aqui debe de ir la info de los gladiadores
+    }
 
 }
 
