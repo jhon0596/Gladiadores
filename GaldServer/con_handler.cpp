@@ -71,7 +71,7 @@ void con_handler::operaciones() {
                         boost::asio::placeholders::bytes_transferred));
 
 
-  /*  this->message=s1.getGlad()+"\n";
+    this->message=s1.getGlad()+"\n";
     sock.async_write_some(
             boost::asio::buffer(this->message, max_length),
             boost::bind(&con_handler::handle_write,
@@ -80,19 +80,8 @@ void con_handler::operaciones() {
                         boost::asio::placeholders::bytes_transferred));
 
 
-*/
+
 
     this->message="";
 
 }
-
-
-
-template<typename T>
-std::vector<T> con_handler::as_vector(boost::property_tree::ptree const &pt, const boost::property_tree::ptree::key_type &key) {
-    std::vector<T> r;
-    for (auto& item : pt.get_child(key))
-        r.push_back(item.second.get_value<T>());
-    return r;
-}
-

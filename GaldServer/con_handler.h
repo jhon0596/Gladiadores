@@ -63,20 +63,19 @@ public:
     void handle_write(const boost::system::error_code &err, size_t bytes_transferred);
 
     /**
-    *@brief  metodo que realiza las acciones para el juego y los multiples juegos
+    *@brief  metodo que realiza las acciones para la simulacion y los multiples xml
     * */
     void operaciones();
 
 private:
-    template<typename T>
+
     /**
-    *@brief  vector para la traduccion de los aarreglos de la posicion de la palbra en la matriz
+    *@brief  maximo tamaño de entrada y salida
      *
     * */
-    std::vector<T> as_vector(boost::property_tree::ptree const &pt, boost::property_tree::ptree::key_type const &key);
 
     enum {
-        max_length = 1024
+        max_length = 2048
     };
     /**
     *@brief  socket de entrada del servidor
@@ -89,14 +88,9 @@ private:
     * */
     std::string message = " ";
 
-    /**
-    *@brief  metodo que el juego con el codigo
-     * @param codigo el codigo de entrada
-    * */
-    int buscarJuego(std::string codigo);
 
     /**
-    *@brief  string para la entrada del serial de json
+    *@brief  string para la entrada
      *
     * */
     std::string data;

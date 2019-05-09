@@ -5,7 +5,7 @@
 #ifndef GALDSERVER_TORRE_H
 #define GALDSERVER_TORRE_H
 
-#include "../utilities/Utilities.h"
+#include "Utilities.h"
 #include <string>
 
 class Torre {

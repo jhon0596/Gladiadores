@@ -5,25 +5,49 @@
 #ifndef GALDSERVER_SIMULACION_H
 #define GALDSERVER_SIMULACION_H
 
-#include "objects/Gladiador.h"
-#include "objects/Torre.h"
+#include "Gladiador.h"
+#include "Torre.h"
 #include "boost/property_tree/ptree.hpp"
-#include "dataStructure/ListaTorres.h"
+#include "ListaTorres.h"
 #include "boost/property_tree/xml_parser.hpp"
 
 
 class Simulacion {
 public:
+    /**
+    *@brief  constructor de la simulacion
+     *
+    * */
     Simulacion();
+    /**
+    *@brief metodo para crear las torres dentro de la matirz
+     *
+    * */
     void  crearTorres();
+    /**
+    *@brief  metodo para crear los gladiadores
+
+    * */
     void crearGladiadores();
-    const std::string &getGlad() const;
+    /**
+    *@brief  metodo para retornar los gladiadores formato json
+
+    * */
+     std::string &getGlad() ;
+    /**
+    *@brief  lista de torres en la matriz
+
+    * */
     ListaTorres lt;
-     std::string &getTorre() ;
+    /**
+    *@brief  metodo para retornar las torres formato json
+
+    * */
+    std::string &getTorre() ;
 private:
 
 
-    std::string glad,torre;
+    std::string torre,gladiar;
 };
 
 

@@ -19,7 +19,7 @@ void node::setTorre(Torre torre) {
 }
 
 Torre node::gettorre() const {
-    return Torre();
+    return this->torre;
 }
 
 node::node() {}

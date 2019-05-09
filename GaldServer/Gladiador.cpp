@@ -1,7 +1,7 @@
 //
 // Created by gacova on 15/04/19.
 //
-#include "../utilities/Utilities.h"
+#include "Utilities.h"
 #include "Gladiador.h"
 
 

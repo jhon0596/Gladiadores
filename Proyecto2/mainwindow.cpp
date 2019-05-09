@@ -6,6 +6,9 @@
 #include<time.h>
 #include<stdlib.h>
 #include "clienthandler.h"
+#include <boost/foreach.hpp>
+#include "boost/property_tree/ptree.hpp"
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -22,13 +25,13 @@ MainWindow::~MainWindow()
 
 
 
-void MainWindow::addTorre(){
+void MainWindow::addTorre(int pos,int tipo){
 
-    QString torre = getTorre(cl.a);
+    QString torre = getTorre(tipo);
     QString caso1 = ":/caminoTVerticalAbajo.jpg";
     QString caso2 = ":/caminoTHorizontalArriba.jpg";
 
-    switch (cl.b) {
+    switch (pos) {
 
     case 1:
         ui->C1->setPixmap(caso1);
@@ -346,6 +349,28 @@ QString MainWindow::getTorre(int caso){
     return torre;
 }
 
+void MainWindow::leerXML()
+{
+
+    using boost::property_tree::ptree;
+    //revisar aqui
+
+    if(cl.propSev.get<std::string>("id")=="LT"){
+        int tip,pos;
+        BOOST_FOREACH( ptree::value_type & v,cl.propSev.get_child("lista")){
+            if(v.first=="Torre"){
+                tip=v.second.get<int>("t");
+                pos=v.second.get<int>("p");
+                addTorre(pos,tip);
+            }
+        }
+    }
+    else if(cl.propSev.get<std::string>("id")=="LG"){
+        //aqui debe de ir la info de los gladiadores
+    }
+
+}
+
 
 
 
@@ -353,7 +378,7 @@ QString MainWindow::getTorre(int caso){
 void MainWindow::on_crearmat_clicked()
 {
     cl.send2Server("hola");
-    addTorre();
+    leerXML();
 }
 
 void MainWindow::fillMat()
@@ -477,4 +502,104 @@ void MainWindow::fillMat()
     ui->C98->setPixmap(caso2);
     ui->C99->setPixmap(caso2);
     ui->C100->setPixmap(caso2);
+}
+
+
+
+void MainWindow::moverGladiador1Abajo(int x, int y){
+
+            ui->G1->setGeometry(x,y+1,25,25);
+}
+
+void MainWindow::moverGladiador1Arriba(int x, int y){
+
+            ui->G1->setGeometry(x,y-1,25,25);
+
+}
+void MainWindow::moverGladiador1Derecha(int x, int y){
+
+            ui->G1->setGeometry(x+1,y,25,25);
+
+}
+
+void MainWindow::moverGladiador1Izquierda(int x, int y){
+
+            ui->G1->setGeometry(x-1,y,25,25);
+
+}
+
+void MainWindow::mover1(int casillaActual, int casillaSiguiente){
+
+    if(casillaActual-casillaSiguiente == 1){
+        for (int i = 0; i < 80; ++i) {
+            moverGladiador1Izquierda(ui->G1->x(),ui->G1->y());
+        }
+
+    }
+    if(casillaActual-casillaSiguiente == -1){
+        for (int i = 0; i < 80; ++i) {
+             moverGladiador1Derecha(ui->G1->x(),ui->G1->y());
+        }
+    }
+    if(casillaActual-casillaSiguiente == 10){
+        for (int i = 0; i < 80; ++i) {
+            moverGladiador1Arriba(ui->G1->x(),ui->G1->y());
+        }
+    }
+    if(casillaActual-casillaSiguiente == -10){
+        for (int i = 0; i < 80; ++i) {
+            moverGladiador1Abajo(ui->G1->x(),ui->G1->y());
+        }
+    }
+
+}
+
+
+
+void MainWindow::moverGladiador2Abajo(int x, int y){
+
+            ui->G2->setGeometry(x,y+1,25,25);
+}
+
+void MainWindow::moverGladiador2Arriba(int x, int y){
+
+            ui->G2->setGeometry(x,y-1,25,25);
+
+}
+void MainWindow::moverGladiador2Derecha(int x, int y){
+
+            ui->G2->setGeometry(x+1,y,25,25);
+
+}
+
+void MainWindow::moverGladiador2Izquierda(int x, int y){
+
+            ui->G2->setGeometry(x-1,y,25,25);
+
+}
+
+void MainWindow::mover2(int casillaActual, int casillaSiguiente){
+
+    if(casillaActual-casillaSiguiente == 1){
+        for (int i = 0; i < 80; ++i) {
+            moverGladiador2Izquierda(ui->G2->x(),ui->G2->y());
+        }
+
+    }
+    if(casillaActual-casillaSiguiente == -1){
+        for (int i = 0; i < 80; ++i) {
+             moverGladiador2Derecha(ui->G2->x(),ui->G2->y());
+        }
+    }
+    if(casillaActual-casillaSiguiente == 10){
+        for (int i = 0; i < 80; ++i) {
+            moverGladiador2Arriba(ui->G2->x(),ui->G2->y());
+        }
+    }
+    if(casillaActual-casillaSiguiente == -10){
+        for (int i = 0; i < 80; ++i) {
+            moverGladiador2Abajo(ui->G2->x(),ui->G2->y());
+        }
+    }
+
 }

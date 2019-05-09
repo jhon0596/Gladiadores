@@ -6,7 +6,7 @@
 #define GALDSERVER_NODE_H
 
 
-#include "../objects/Torre.h"
+#include "Torre.h"
 
 class node {
 

@@ -40,3 +40,11 @@ void Torre::setTorre() {
 
 
 }
+
+int Torre::getPos() const {
+    return pos;
+}
+
+const std::string &Torre::getTipo() const {
+    return tipo;
+}
