@@ -18,7 +18,7 @@ if(Boost_FOUND)
 endif()
 
 
-add_executable(GaldServer main.cpp Gladiador.cpp Gladiador.h Utilities.cpp Utilities.h con_handler.cpp con_handler.h Server.cpp Server.h Simulacion.cpp Simulacion.h Torre.cpp Torre.h node.cpp node.h ListaTorres.cpp ListaTorres.h)
+add_executable(GaldServer main.cpp Gladiador.cpp Gladiador.h Utilities.cpp Utilities.h con_handler.cpp con_handler.h Server.cpp Server.h Simulacion.cpp Simulacion.h Torre.cpp Torre.h node.cpp node.h ListaTorres.cpp ListaTorres.h algoritmoGenetico.cpp algoritmoGenetico.h ListaGladiadores.cpp ListaGladiadores.h NodoGladiador.cpp NodoGladiador.h)
 target_link_libraries(${PROJECT_NAME} ${CMAKE_THREAD_LIBS_INIT})
 
 if(Boost_FOUND)
