@@ -2601,7 +2601,7 @@
      <string>Gadiador Poblacion 2</string>
     </property>
    </widget>
-   <widget class="QTextBrowser" name="textBrowser">
+   <widget class="QTextBrowser" name="Poblacion1txtBrow">
     <property name="geometry">
      <rect>
       <x>1130</x>
@@ -2611,7 +2611,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QTextBrowser" name="textBrowser_2">
+   <widget class="QTextBrowser" name="Poblacion2txtBrow">
     <property name="geometry">
      <rect>
       <x>1130</x>

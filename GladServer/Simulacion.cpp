@@ -16,7 +16,7 @@ void Simulacion::crearGladiadores() {
 
 void Simulacion::crearTorres() {
 
-    for (int i=0;i<3;i++){
+    for (int i=0;i<1;i++){
         Torre t1 = Torre();
         lt.add(t1);
     }
@@ -41,7 +41,7 @@ void Simulacion::crearTorres() {
     boost::property_tree::write_xml(buf, Gald, false);
      gladiar=buf.str();
 
-
+     std::cout <<gladiar<<std::endl;
 
     return gladiar;
 }
