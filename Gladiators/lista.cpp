@@ -41,7 +41,7 @@ void Lista::enqueue(int x, int y)
 
 void Lista::dequeue()
 {
-    std::cout<< "Me devuelvo y elimino "<< tail->getX()<< ", "<< tail->getY()<< std::endl;
+    std::cout<< "Estoy en  "<< tail->getX()<< ", "<< tail->getY()<<". Me devuelvo, no hay camino."<< std::endl;
     if(head!=tail)
     {
         ListaNodo* tmp = tail->getBefore();

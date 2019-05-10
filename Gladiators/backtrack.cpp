@@ -7,10 +7,10 @@ BackTrack::BackTrack()
 
 bool BackTrack::findPath(Matriz* matriz, int x, int y, int i, int j)
 {
-    std::cout<< "Entre al find Path \n \n";
+    std::cout<< "Inicio find Path \n \n";
     Nodo_Matriz* start = matriz->getNodo(x,y);
     Nodo_Matriz* end = matriz->getNodo(i-1,j-1);
-    std::cout<< "Voy a solucion \n \n";
+    std::cout<< "Buscando si hay solucion \n \n";
     std::cout<< start->getX()<< ", "<< start->getY()<< std::endl;
     std::cout<< end->getX()<< ", "<< end->getY()<< std::endl;
 

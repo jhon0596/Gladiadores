@@ -38,11 +38,13 @@ public:
      */
     void printMatriz();
     /**
-     * @brief set setea un nodo como obstaculo
+     * @brief devuelve un true si puede setear un nodo como obstaculo
+     *        y un false si ya esta marcado o esta  en un lugar no valido
      * @param int x
      * @param int y
+     * @return bool
      */
-    void setObstacle(int x, int y);
+    bool setObstacle(int x, int y);
     /**
      * @brief getStart, devuelve el nodo 0,0 de la matriz
      * @return Nodo_Matriz*
@@ -55,6 +57,12 @@ public:
      * @return Nodo_Matriz*
      */
     Nodo_Matriz* getNodo(int x, int y);
+    /**
+     * @brief noBlock verifica que no se ponga un obstaculo en una posicion no valida
+     * @param nodo
+     * @return bool
+     */
+    bool noBlock(Nodo_Matriz* nodo);
 };
 
 #endif // MATRIZ_H

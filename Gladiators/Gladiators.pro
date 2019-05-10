@@ -31,7 +31,8 @@ SOURCES += \
     nodo_matriz.cpp \
     backtrack.cpp \
     lista.cpp \
-    listanodo.cpp
+    listanodo.cpp \
+    astar.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -39,7 +40,8 @@ HEADERS += \
     nodo_matriz.h \
     backtrack.h \
     lista.h \
-    listanodo.h
+    listanodo.h \
+    astar.h
 
 FORMS += \
         mainwindow.ui

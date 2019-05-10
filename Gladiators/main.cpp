@@ -13,15 +13,14 @@ int main(int argc, char *argv[])
     //MainWindow w;
     //w.show();
 
-    int n = 10;
+    int n = 5;
     Matriz *matriz = new Matriz(n,n);
 
-    matriz->setObstacle(1,0);
-    matriz->setObstacle(1,3);
-    //matriz->setObstacle(2,3);
-    matriz->setObstacle(3,0);
-    matriz->setObstacle(8,9);
-    matriz->setObstacle(9,8);
+    matriz->setObstacle(0,1);
+    matriz->setObstacle(1,1);
+    matriz->setObstacle(4,0);
+    matriz->setObstacle(4,1);
+    matriz->setObstacle(3,4);
 
     matriz->printMatriz();
 

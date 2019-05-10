@@ -603,3 +603,9 @@ void MainWindow::mover2(int casillaActual, int casillaSiguiente){
     }
 
 }
+
+void MainWindow::on_pushButton_clicked()
+{
+    generaciones = new VentanaGeneraciones(this);
+    generaciones->show();
+}
