@@ -10,6 +10,7 @@
 #include "boost/property_tree/ptree.hpp"
 #include "ListaTorres.h"
 #include "boost/property_tree/xml_parser.hpp"
+#include "matriz.h"
 
 
 class Simulacion {
@@ -45,7 +46,7 @@ public:
     * */
     std::string &getTorre() ;
 private:
-
+    Matriz mat =Matriz(10,10);
 
     std::string torre,gladiar;
 };

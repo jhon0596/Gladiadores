@@ -99,9 +99,10 @@ void Matriz::printMatriz()
     std::cout<< "\n";
 }
 
-void Matriz::setObstacle(int x, int y)
+bool Matriz::setObstacle(int x, int y)
 {
     Nodo_Matriz *current = start;
+
     for (int i = 0; i < x;i++) {
         current = current->getBottom();
     }
@@ -109,7 +110,17 @@ void Matriz::setObstacle(int x, int y)
         current = current->getRight();
     }
 
-    current->setFlag(true);
+    if (noBlock(current))
+    {
+        if(current->getFlag() != true)
+        {
+            current->setFlag(true);
+            return true;
+        }else {
+            return false;
+        }
+    }
+    return false;
 }
 
 Nodo_Matriz *Matriz::getStart()
@@ -126,6 +137,18 @@ Nodo_Matriz *Matriz::getNodo(int x, int y)
     for (int j = 0; j < y; j++) {
         current = current->getRight();
     }
-
     return current;
+}
+
+bool Matriz::noBlock(Nodo_Matriz *nodo)
+{
+    Nodo_Matriz* start = this->start;
+    Nodo_Matriz* end = this->getNodo(x-1, y-1);
+
+    if(nodo == start || nodo == end) return false;
+    else if ((nodo == start->getBottom() && start->getRight()->getFlag() == true)
+             || (nodo == start->getRight() && start->getBottom()->getFlag() == true) ) return false;
+    else if ((nodo == end->getTop() && end->getLeft()->getFlag() == true)
+             || (nodo == end->getLeft() && end->getTop()->getFlag() == true) ) return false;
+    else return true;
 }

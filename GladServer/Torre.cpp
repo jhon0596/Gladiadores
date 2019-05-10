@@ -48,3 +48,9 @@ int Torre::getPos() const {
 const std::string &Torre::getTipo() const {
     return tipo;
 }
+
+void Torre::setPos() {
+
+
+    this->pos = Utilities::random(1,100);
+}

@@ -14,12 +14,15 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    clienthandler.cpp
+    clienthandler.cpp \
+    ventanageneraciones.cpp
 
 HEADERS  += mainwindow.h \
-    clienthandler.h
+    clienthandler.h \
+    ventanageneraciones.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    ventanageneraciones.ui
 
 INCLUDEPATH += /usr/include/boost
 

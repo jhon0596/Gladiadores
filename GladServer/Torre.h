@@ -17,6 +17,9 @@ public:
 private:
     int dano,pos,idTor,alcance;
 public:
+    void setPos();
+
+public:
     int getPos() const;
 
     const std::string &getTipo() const;

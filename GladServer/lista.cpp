@@ -18,6 +18,20 @@ void Lista::printMe()
         std::cout<< tmp->getX()<<", "<<tmp->getY()<<" -> ";
         tmp = tmp->getNext();
     }
+    std::cout<< ".\n";
+}
+
+void Lista::cleanMe()
+{
+    std::cout<<"Limpiando\n";
+    ListaNodo* tmp = head;
+    while(tmp != nullptr)
+    {
+        std::cout<< tmp->getX()<<", "<<tmp->getY()<<" -> ";
+        head = tmp->getNext();
+        delete tmp;
+        tmp = head;
+    }
     std::cout<< "\n";
 }
 
@@ -41,7 +55,7 @@ void Lista::enqueue(int x, int y)
 
 void Lista::dequeue()
 {
-    std::cout<< "Me devuelvo y elimino "<< tail->getX()<< ", "<< tail->getY()<< std::endl;
+    std::cout<< "Estoy en  "<< tail->getX()<< ", "<< tail->getY()<<". Me devuelvo, no hay camino."<< std::endl;
     if(head!=tail)
     {
         ListaNodo* tmp = tail->getBefore();

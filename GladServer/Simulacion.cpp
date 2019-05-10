@@ -18,7 +18,25 @@ void Simulacion::crearTorres() {
 
     for (int i=0;i<3;i++){
         Torre t1 = Torre();
-        lt.add(t1);
+        int ps =t1.getPos()-1;
+        bool flag = true;
+        while (flag){
+            if(mat.setObstacle(ps/10,ps%10)){
+                lt.add(t1);
+                flag= false;
+
+            }
+            else{
+                t1.setPos();
+                ps =t1.getPos()-1;
+            }
+
+        }
+
+
+
+
+
     }
 
 
@@ -41,7 +59,7 @@ void Simulacion::crearTorres() {
     boost::property_tree::write_xml(buf, Gald, false);
      gladiar=buf.str();
 
-
+     std::cout <<gladiar<<std::endl;
 
     return gladiar;
 }

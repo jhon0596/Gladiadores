@@ -4,9 +4,13 @@
 #include <QMainWindow>
 #include "QLabel"
 #include "clienthandler.h"
+#include "ventanageneraciones.h"
+
 namespace Ui {
 class MainWindow;
 }
+
+class VentanaGeneraciones;
 
 class MainWindow : public QMainWindow
 {
@@ -35,9 +39,12 @@ public:
 private slots:
     void on_crearmat_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     void fillMat();
+    VentanaGeneraciones* generaciones;
 };
 
 #endif // MAINWINDOW_H

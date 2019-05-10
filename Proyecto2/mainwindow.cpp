@@ -366,7 +366,18 @@ void MainWindow::leerXML()
         }
     }
     else if(cl.propSev.get<std::string>("id")=="LG"){
+        QString info=" ";
         //aqui debe de ir la info de los gladiadores
+        BOOST_FOREACH( ptree::value_type & v,cl.propSev.get_child("lista")){
+            if(v.first=="gladiador"){
+                info.append("Edad "+QString::number(v.second.get<int>("e"))+"\n");
+                info.append("Condicion fisica:"+QString::number(v.second.get<int>("conf"))+"\n");
+                info.append("Fuerza Tronco Superior:"+QString::number(v.second.get<int>("trsup"))+"\n");
+                info.append("Fuerza Tronco Inferior:"+QString::number(v.second.get<int>("trinf"))+"\n");
+                info.append("Fuerza Emocional:"+QString::number(v.second.get<int>("emoji"))+"\n");
+                ui->Poblacion1txtBrow->setText(info);
+            }
+        }
     }
 
 }
@@ -377,7 +388,9 @@ void MainWindow::leerXML()
 
 void MainWindow::on_crearmat_clicked()
 {
-    cl.send2Server("hola");
+    cl.send2Server("t");
+    leerXML();
+    cl.send2Server("g");
     leerXML();
 }
 
@@ -602,4 +615,10 @@ void MainWindow::mover2(int casillaActual, int casillaSiguiente){
         }
     }
 
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    generaciones = new VentanaGeneraciones(this);
+    generaciones->show();
 }

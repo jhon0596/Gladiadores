@@ -18,7 +18,11 @@ if(Boost_FOUND)
 endif()
 
 
+<<<<<<< HEAD:GaldServer/CMakeLists.txt
 add_executable(GaldServer main.cpp Gladiador.cpp Gladiador.h Utilities.cpp Utilities.h con_handler.cpp con_handler.h Server.cpp Server.h Simulacion.cpp Simulacion.h Torre.cpp Torre.h node.cpp node.h ListaTorres.cpp ListaTorres.h algoritmoGenetico.cpp algoritmoGenetico.h ListaGladiadores.cpp ListaGladiadores.h NodoGladiador.cpp NodoGladiador.h)
+=======
+add_executable(GaldServer main.cpp nodo_matriz.cpp nodo_matriz.h backtrack.cpp backtrack.h lista.cpp lista.h listanodo.cpp listanodo.h matriz.cpp matriz.h Gladiador.cpp Gladiador.h Utilities.cpp Utilities.h con_handler.cpp con_handler.h Server.cpp Server.h Simulacion.cpp Simulacion.h Torre.cpp Torre.h node.cpp node.h ListaTorres.cpp ListaTorres.h)
+>>>>>>> master:GladServer/CMakeLists.txt
 target_link_libraries(${PROJECT_NAME} ${CMAKE_THREAD_LIBS_INIT})
 
 if(Boost_FOUND)
