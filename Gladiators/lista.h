@@ -2,6 +2,7 @@
 #define LISTANODOS_H
 
 #include <iostream>
+#include <stdlib.h>
 #include "listanodo.h"
 
 class Lista
@@ -39,6 +40,10 @@ public:
      * @brief printMe imporime en consola los elementos de la lista
      */
     void printMe();
+    /**
+     * @brief cleanMe libera los datos de la lista.
+     */
+    void cleanMe();
 };
 
 #endif // LISTANODOS_H

@@ -5,7 +5,7 @@
 
 #include "matriz.h"
 #include "backtrack.h"
-#include "lista.h"
+#include "astar.h"
 
 int main(int argc, char *argv[])
 {
@@ -25,29 +25,33 @@ int main(int argc, char *argv[])
     matriz->printMatriz();
 
     BackTrack bactrack;
-    bool hayCamino;
+    AStar astar;
+    bool hayCaminoBacktrack, hayCaminoAStar;
+    hayCaminoBacktrack = bactrack.findPath(matriz,0,0,n,n);
+    hayCaminoAStar = astar.findPath(matriz,0,0,n,n);
 
-    hayCamino = bactrack.findPath(matriz,0,0,n,n);
-
-    if(hayCamino)
+    if(hayCaminoBacktrack)
     {
         bactrack.printSol();
         bactrack.printVis();
     }else
     {
         bactrack.printVis();
-        std::cout<< "No hay solucion\n";
+        std::cout<< "No hay solucion Bactrack\n";
     }
-    /*
-    Lista lista;
 
-    lista.enqueue(0,0);
-    lista.enqueue(0,1);
-    lista.enqueue(0,2);
-    lista.enqueue(0,3);
-    lista.enqueue(1,0);
+    if(hayCaminoBacktrack)
+    {
+        astar.printSol();
+    }else
+    {
+        astar.printClose();
+        std::cout<< "No hay solucion Bactrack\n";
+    }
 
-    lista.printMe();
-    */
+    bactrack.clean();
+    bactrack.printSol();
+    bactrack.printVis();
+
     return 0;//a.exec();
 }

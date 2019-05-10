@@ -18,6 +18,20 @@ void Lista::printMe()
         std::cout<< tmp->getX()<<", "<<tmp->getY()<<" -> ";
         tmp = tmp->getNext();
     }
+    std::cout<< ".\n";
+}
+
+void Lista::cleanMe()
+{
+    std::cout<<"Limpiando\n";
+    ListaNodo* tmp = head;
+    while(tmp != nullptr)
+    {
+        std::cout<< tmp->getX()<<", "<<tmp->getY()<<" -> ";
+        head = tmp->getNext();
+        delete tmp;
+        tmp = head;
+    }
     std::cout<< "\n";
 }
 

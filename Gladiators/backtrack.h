@@ -43,6 +43,10 @@ public:
      * @brief printVis imprime en consola todos los nodos que han sido visitados
      */
     void printVis();
+    /**
+     * @brief clean libera los datos de la lista de visitados y solucion.
+     */
+    void clean();
 };
 
 #endif // BACKTRACK_H

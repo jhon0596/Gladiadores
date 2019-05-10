@@ -19,8 +19,8 @@ bool BackTrack::findPath(Matriz* matriz, int x, int y, int i, int j)
 
 bool BackTrack::isSolution(Nodo_Matriz* start, Nodo_Matriz* end)
 {
-    if (start != nullptr)
-    {
+    if (start != nullptr)                                       //Si ni es un nullpointer y no esta en la lista de
+    {                                                           //visitados se procede a buscar los caminos
         if(!visitados.find(start->getX(),start->getY()))
         {
             if (start == end)
@@ -104,4 +104,10 @@ void BackTrack::printVis()
 
     std::cout<< "Visitados: ";
     visitados.printMe();
+}
+
+void BackTrack::clean()
+{
+    visitados.cleanMe();
+    solucion.cleanMe();
 }
