@@ -114,7 +114,7 @@ float Gladiador::calcFitn() {
 
 
 
-    //(((fTroSup+fTroInf)*conFis)+emoji)/edad formula del fitness
+    //  (((fTroSup+fTroInf)*conFis)+emoji)/edad formula del fitness
 
 
     return ((std::abs(atr[2]+atr[3])*atr[1])+atr[4])/atr[0];

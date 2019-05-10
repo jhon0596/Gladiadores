@@ -10,18 +10,35 @@
 
 class Torre {
 public:
+    /**
+     *@brief  constructor de torre
+     * */
     Torre();
+    /**
+     *@brief  metodo que modifica los atributos de la torre dependiendo idTor
+     * */
     void  setTorre();
+    /**
+     *@brief  string de salida de datos
+     * */
     std::string retClin();
-
-private:
-    int dano,pos,idTor,alcance;
-public:
+    /**
+     *@brief  obtiene la posicion el la matriz
+     * */
     int getPos() const;
-
+    /**
+     *@brief  obtiene el tipo de torre
+     * */
     const std::string &getTipo() const;
 
 private:
+    /**
+     *@brief  enteros de daño, posicion, id de la torre, alcance
+     * */
+    int dano,pos,idTor,alcance;
+    /**
+     *@brief  string tipo
+     * */
     std::string tipo ;
 
 
