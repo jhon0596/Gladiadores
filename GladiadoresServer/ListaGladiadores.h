@@ -1,0 +1,14 @@
+//
+// Created by gacova on 14/05/19.
+//
+
+#ifndef GLADIADORESSERVER_LISTAGLADIADORES_H
+#define GLADIADORESSERVER_LISTAGLADIADORES_H
+
+
+class ListaGladiadores {
+
+};
+
+
+#endif //GLADIADORESSERVER_LISTAGLADIADORES_H

@@ -1,0 +1,14 @@
+//
+// Created by gacova on 14/05/19.
+//
+
+#ifndef GLADIADORESSERVER_NODOGLADIADOR_H
+#define GLADIADORESSERVER_NODOGLADIADOR_H
+
+
+class NodoGladiador {
+
+};
+
+
+#endif //GLADIADORESSERVER_NODOGLADIADOR_H
