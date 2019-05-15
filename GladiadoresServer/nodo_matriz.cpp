@@ -3,12 +3,70 @@
 //
 
 #include "nodo_matriz.h"
+Nodo_Matriz *Nodo_Matriz::getParent() const
+{
+    return parent;
+}
+
+void Nodo_Matriz::setParent(Nodo_Matriz *value)
+{
+    parent = value;
+}
+
+float Nodo_Matriz::getH() const
+{
+    return H;
+}
+
+void Nodo_Matriz::setH(Nodo_Matriz* nodo)
+{
+    H = abs(nodo->getX() - x) + abs(nodo->getY() - y);
+}
+
+float Nodo_Matriz::getG() const
+{
+    return G;
+}
+
+void Nodo_Matriz::setG(float value)
+{
+    G = value;
+}
+
+float Nodo_Matriz::getF() const
+{
+    return F;
+}
+
+void Nodo_Matriz::setF()
+{
+    F = H + G;
+}
+
+void Nodo_Matriz::setF(float num)
+{
+    F = num;
+}
+
+bool Nodo_Matriz::getVisited() const
+{
+    return visited;
+}
+
+void Nodo_Matriz::setVisited(bool value)
+{
+    visited = value;
+}
+
 Nodo_Matriz::Nodo_Matriz()
 {
     x = y =0;
     top = bottom = right = left = nullptr;
     diagTopleft = diagTopRight = diagBottomleft = diagBottomRight = nullptr;
-    flag = false;
+    flag = visited = false;
+    parent = nullptr;
+    F = G = INFINITY;
+    H = 0;
 }
 
 Nodo_Matriz *Nodo_Matriz::getDiagTopleft()

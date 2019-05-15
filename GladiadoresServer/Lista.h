@@ -22,9 +22,9 @@ public:
      * @param x
      * @param y
      */
-    void enqueue(int x, int y);
+    void enqueue(Nodo_Matriz *nodo);
     /**
-     * @brief dequeue elimina el ultimo nodo agregado
+     * @brief dequeue elimina el primer nodo agregado
      */
     void dequeue();
     /**
@@ -33,13 +33,13 @@ public:
      * @param y
      * @return bool, true si encuentra el valor, false si no
      */
-    bool find(int x, int y);
+    bool find(Nodo_Matriz *nodo);
 
     //Getters and setters basicos
     listanodo* getHead();
-    void setHead(listanodo &value);
+    void setHead(listanodo *value);
     listanodo* getTail();
-    void setTail(listanodo &value);
+    void setTail(listanodo *value);
     /**
      * @brief printMe imporime en consola los elementos de la lista
      */
@@ -48,6 +48,25 @@ public:
      * @brief cleanMe libera los datos de la lista.
      */
     void cleanMe();
+    /**
+     * @brief pop elimina el ultimo nodo agregado
+     */
+    void pop();
+    /**
+     * @brief sort ordena la lista de menor a mayor valor de F
+     */
+    void sort();
+    /**
+     * @brief swap intercambia valores entre 2 nodos
+     * @param listanodo* nodo1
+     * @param listanodo* nodo2
+     */
+    void swap(listanodo* nodo1, listanodo* nodo2);
+    /**
+     * @brief size devuelve cuantos elementos tiene la lista
+     * @return int
+     */
+    int size();
 };
 
 

@@ -17,7 +17,7 @@ if(Boost_FOUND)
 endif()
 
 
-add_executable(GladiadoresServer main.cpp con_handler.cpp con_handler.h Server.cpp Server.h Torre.cpp Torre.h Simulacion.cpp Simulacion.h Utilities.cpp Utilities.h matriz.cpp matriz.h Gladiador.cpp Gladiador.h ListaTorres.cpp ListaTorres.h backtrack.cpp backtrack.h listanodo.cpp listanodo.h nodo_matriz.cpp nodo_matriz.h ListaGladiadores.cpp ListaGladiadores.h NodoGladiador.cpp NodoGladiador.h AlgoritmoGenetico.cpp AlgoritmoGenetico.h node.cpp node.h Lista.cpp Lista.h)
+add_executable(GladiadoresServer main.cpp con_handler.cpp con_handler.h Server.cpp Server.h Torre.cpp Torre.h Simulacion.cpp Simulacion.h Utilities.cpp Utilities.h matriz.cpp matriz.h Gladiador.cpp Gladiador.h ListaTorres.cpp ListaTorres.h backtrack.cpp backtrack.h listanodo.cpp listanodo.h nodo_matriz.cpp nodo_matriz.h ListaGladiadores.cpp ListaGladiadores.h NodoGladiador.cpp NodoGladiador.h AlgoritmoGenetico.cpp AlgoritmoGenetico.h node.cpp node.h Lista.cpp Lista.h AStar.cpp AStar.h)
 
 target_link_libraries(${PROJECT_NAME} ${CMAKE_THREAD_LIBS_INIT})
 

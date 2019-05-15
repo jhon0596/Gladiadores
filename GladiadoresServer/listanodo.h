@@ -4,22 +4,17 @@
 
 #ifndef GLADIADORESSERVER_listanodo_H
 #define GLADIADORESSERVER_listanodo_H
-
+#include "nodo_matriz.h"
 
 class listanodo {
 private:
-    int x;
-    int y;
+    Nodo_Matriz *data;
     listanodo* next;
     listanodo* before;
 
 public:
     listanodo();
     // Getters and setters basicos
-    int getX() const;
-    void setX(int value);
-    int getY() const;
-    void setY(int value);
     listanodo *getNext() const;
     /**
      * @brief setNext setea el siguiente listanodo
@@ -32,6 +27,8 @@ public:
      * @param listanodo*
      */
     void setBefore(listanodo *value);
+    Nodo_Matriz *getData() const;
+    void setData(Nodo_Matriz *value);
 };
 
 

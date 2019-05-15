@@ -11,10 +11,12 @@
 #include "Lista.h"
 
 class backtrack {
-    Lista solucion;
-    Lista visitados;
+private:
+    Lista *solucion;
+    Lista *visitados;
 
 public:
+
     backtrack();
     /**
      * @brief findPath crea las variables necesarias para poder iniciar la
@@ -47,6 +49,8 @@ public:
      * @brief clean libera los datos de la lista de visitados y solucion.
      */
     void clean();
+
+    Lista* getSolucion();
 };
 
 

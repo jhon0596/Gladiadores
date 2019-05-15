@@ -5,7 +5,7 @@
 #ifndef GLADIADORESSERVER_NODO_MATRIZ_H
 #define GLADIADORESSERVER_NODO_MATRIZ_H
 
-
+#include <math.h>
 #include <string>
 /**
  * @brief The Nodo_Matriz class, es un nodo enlazado en 8 direcciones, arriba, abajo, izquierda
@@ -14,9 +14,15 @@
 class Nodo_Matriz
 {
 private:
+private:
     int x;
     int y;
     bool flag;
+    bool visited;
+    float H;
+    float G;
+    float F;
+    Nodo_Matriz* parent;
     Nodo_Matriz* top;
     Nodo_Matriz* bottom;
     Nodo_Matriz* right;
@@ -90,6 +96,17 @@ public:
      * @param int
      */
     void setY(int value);
+    Nodo_Matriz *getParent() const;
+    void setParent(Nodo_Matriz *value);
+    float getH() const;
+    void setH(Nodo_Matriz* nodo);
+    float getG() const;
+    void setG(float value);
+    float getF() const;
+    void setF();
+    void setF(float num);
+    bool getVisited() const;
+    void setVisited(bool value);
 
 };
 

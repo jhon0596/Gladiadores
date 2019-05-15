@@ -5,11 +5,13 @@
 #include "backtrack.h"
 backtrack::backtrack()
 {
-
+    solucion = new Lista();
+    visitados = new Lista();
 }
 
 bool backtrack::findPath(Matriz* matriz, int x, int y, int i, int j)
 {
+    clean();
     std::cout<< "Inicio find Path \n \n";
     Nodo_Matriz* start = matriz->getNodo(x,y);
     Nodo_Matriz* end = matriz->getNodo(i-1,j-1);
@@ -22,21 +24,21 @@ bool backtrack::findPath(Matriz* matriz, int x, int y, int i, int j)
 
 bool backtrack::isSolution(Nodo_Matriz* start, Nodo_Matriz* end)
 {
-    if (start != nullptr)                                       //Si ni es un nullpointer y no esta en la lista de
-    {                                                           //visitados se procede a buscar los caminos
-        if(!visitados.find(start->getX(),start->getY()))
+    if (start != nullptr)                    //Si ni es un nullpointer y no esta en la lista de
+    {                                        //visitados se procede a buscar los caminos
+        if(!visitados->find(start))
         {
             if (start == end)
             {
                 std::cout<< "Encontre la solucion \n";
-                visitados.enqueue(start->getX(),start->getY());
-                solucion.enqueue(start->getX(),start->getY());
+                visitados->enqueue(start);
+                solucion->enqueue(start);
                 return true;
             }
             else if (!start->getFlag())
             {
-                visitados.enqueue(start->getX(),start->getY());
-                solucion.enqueue(start->getX(),start->getY());
+                visitados->enqueue(start);
+                solucion->enqueue(start);
 
                 if (isSolution(start->getRight(), end))
                 {
@@ -81,7 +83,7 @@ bool backtrack::isSolution(Nodo_Matriz* start, Nodo_Matriz* end)
                 }
                 */
 
-                solucion.dequeue();
+                solucion->pop();
 
                 return false;
             }
@@ -99,18 +101,23 @@ void backtrack::printSol()
 {
 
     std::cout<< "Solucion: ";
-    solucion.printMe();
+    solucion->printMe();
 }
 
 void backtrack::printVis()
 {
 
     std::cout<< "Visitados: ";
-    visitados.printMe();
+    visitados->printMe();
 }
 
 void backtrack::clean()
 {
-    visitados.cleanMe();
-    solucion.cleanMe();
+    visitados->cleanMe();
+    solucion->cleanMe();
+}
+
+Lista *backtrack::getSolucion()
+{
+    return solucion;
 }

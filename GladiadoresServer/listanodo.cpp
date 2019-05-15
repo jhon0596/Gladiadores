@@ -3,29 +3,19 @@
 //
 
 #include "listanodo.h"
+Nodo_Matriz *listanodo::getData() const
+{
+    return data;
+}
+
+void listanodo::setData(Nodo_Matriz *value)
+{
+    data = value;
+}
+
 listanodo::listanodo()
 {
     next = before = nullptr;
-}
-
-int listanodo::getX() const
-{
-    return x;
-}
-
-void listanodo::setX(int value)
-{
-    x = value;
-}
-
-int listanodo::getY() const
-{
-    return y;
-}
-
-void listanodo::setY(int value)
-{
-    y = value;
 }
 
 listanodo *listanodo::getNext() const
@@ -47,3 +37,4 @@ void listanodo::setBefore(listanodo *value)
 {
     before = value;
 }
+
