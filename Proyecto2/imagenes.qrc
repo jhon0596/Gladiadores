@@ -10,10 +10,8 @@
         <file>torreExplosiva.png</file>
         <file>torreFuego.png</file>
         <file>torreSencilla.png</file>
-        <file>fe0.png</file>
         <file>fe45.png</file>
         <file>fe90.png</file>
-        <file>fe135.png</file>
         <file>ff0.png</file>
         <file>ff45.png</file>
         <file>ff90.png</file>
@@ -31,12 +29,14 @@
         <file>fs270.png</file>
         <file>fs315.png</file>
         <file>glad1atras.png</file>
-        <file>glad1der.png</file>
         <file>glad1izq.png</file>
         <file>glad2atras.png</file>
         <file>glad2delante.png</file>
         <file>glad2dere.png</file>
         <file>glad2frente.png</file>
         <file>glad2izq.png</file>
+        <file>glad1der.png</file>
+        <file>fe135.png</file>
+        <file>fe0.png</file>
     </qresource>
 </RCC>
