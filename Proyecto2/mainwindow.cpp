@@ -13,9 +13,12 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
+    QString caso = ":/glad1der.png";
+    QString caso2 = ":/glad2dere.png";
     ui->setupUi(this);
     fillMat();
-
+    ui->G1->setPixmap(caso);
+    ui->G2->setPixmap(caso2);
 }
 
 MainWindow::~MainWindow()
@@ -375,7 +378,7 @@ void MainWindow::leerXML()
                 info.append("Fuerza Tronco Superior:"+QString::number(v.second.get<int>("trsup"))+"\n");
                 info.append("Fuerza Tronco Inferior:"+QString::number(v.second.get<int>("trinf"))+"\n");
                 info.append("Fuerza Emocional:"+QString::number(v.second.get<int>("emoji"))+"\n");
-                ui->Poblacion1txtBrow->setText(info);
+                ui->G1Datos->setText(info);
             }
         }
     }
@@ -520,24 +523,28 @@ void MainWindow::fillMat()
 
 
 void MainWindow::moverGladiador1Abajo(int x, int y){
-
-            ui->G1->setGeometry(x,y+1,25,25);
+    QString caso = ":/glad1frente.png";
+    ui->G1->setGeometry(x,y+1,25,25);
+    ui->G1->setPixmap(caso);
 }
 
 void MainWindow::moverGladiador1Arriba(int x, int y){
-
-            ui->G1->setGeometry(x,y-1,25,25);
+    QString caso = ":/glad1atras.png";
+    ui->G1->setGeometry(x,y-1,25,25);
+    ui->G1->setPixmap(caso);
 
 }
 void MainWindow::moverGladiador1Derecha(int x, int y){
-
-            ui->G1->setGeometry(x+1,y,25,25);
+    QString caso = ":/glad1der.png";
+    ui->G1->setGeometry(x+1,y,25,25);
+    ui->G1->setPixmap(caso);
 
 }
 
 void MainWindow::moverGladiador1Izquierda(int x, int y){
-
-            ui->G1->setGeometry(x-1,y,25,25);
+    QString caso = ":/glad1izq.png";
+    ui->G1->setGeometry(x-1,y,25,25);
+    ui->G1->setPixmap(caso);
 
 }
 
@@ -546,22 +553,126 @@ void MainWindow::mover1(int casillaActual, int casillaSiguiente){
     if(casillaActual-casillaSiguiente == 1){
         for (int i = 0; i < 80; ++i) {
             moverGladiador1Izquierda(ui->G1->x(),ui->G1->y());
+            QString caso = ":/transparente.png";
+            ui->lb->setPixmap(caso);
+            ui->lb_2->setPixmap(caso);
+            ui->lb_3->setPixmap(caso);
+            ui->lb_4->setPixmap(caso);
+            ui->lb_5->setPixmap(caso);
+            ui->lb_6->setPixmap(caso);
+            ui->lb_7->setPixmap(caso);
+            ui->lb_8->setPixmap(caso);
+            ui->lb_9->setPixmap(caso);
+            ui->lb_10->setPixmap(caso);
+            ui->lb_11->setPixmap(caso);
+            ui->lb_12->setPixmap(caso);
+            ui->lb_13->setPixmap(caso);
+            ui->lb_14->setPixmap(caso);
+            ui->lb_15->setPixmap(caso);
+            ui->lb_16->setPixmap(caso);
+            ui->lb_17->setPixmap(caso);
+            ui->lb_18->setPixmap(caso);
+            ui->lb_19->setPixmap(caso);
+            ui->lb_20->setPixmap(caso);
+            ui->lb_21->setPixmap(caso);
+            ui->lb_22->setPixmap(caso);
+            ui->lb_23->setPixmap(caso);
+            ui->lb_24->setPixmap(caso);
+
         }
 
     }
     if(casillaActual-casillaSiguiente == -1){
         for (int i = 0; i < 80; ++i) {
              moverGladiador1Derecha(ui->G1->x(),ui->G1->y());
+             QString caso = ":/transparente.png";
+             ui->lb->setPixmap(caso);
+             ui->lb_2->setPixmap(caso);
+             ui->lb_3->setPixmap(caso);
+             ui->lb_4->setPixmap(caso);
+             ui->lb_5->setPixmap(caso);
+             ui->lb_6->setPixmap(caso);
+             ui->lb_7->setPixmap(caso);
+             ui->lb_8->setPixmap(caso);
+             ui->lb_9->setPixmap(caso);
+             ui->lb_10->setPixmap(caso);
+             ui->lb_11->setPixmap(caso);
+             ui->lb_12->setPixmap(caso);
+             ui->lb_13->setPixmap(caso);
+             ui->lb_14->setPixmap(caso);
+             ui->lb_15->setPixmap(caso);
+             ui->lb_16->setPixmap(caso);
+             ui->lb_17->setPixmap(caso);
+             ui->lb_18->setPixmap(caso);
+             ui->lb_19->setPixmap(caso);
+             ui->lb_20->setPixmap(caso);
+             ui->lb_21->setPixmap(caso);
+             ui->lb_22->setPixmap(caso);
+             ui->lb_23->setPixmap(caso);
+             ui->lb_24->setPixmap(caso);
+
         }
     }
     if(casillaActual-casillaSiguiente == 10){
         for (int i = 0; i < 80; ++i) {
             moverGladiador1Arriba(ui->G1->x(),ui->G1->y());
+            QString caso = ":/transparente.png";
+            ui->lb->setPixmap(caso);
+            ui->lb_2->setPixmap(caso);
+            ui->lb_3->setPixmap(caso);
+            ui->lb_4->setPixmap(caso);
+            ui->lb_5->setPixmap(caso);
+            ui->lb_6->setPixmap(caso);
+            ui->lb_7->setPixmap(caso);
+            ui->lb_8->setPixmap(caso);
+            ui->lb_9->setPixmap(caso);
+            ui->lb_10->setPixmap(caso);
+            ui->lb_11->setPixmap(caso);
+            ui->lb_12->setPixmap(caso);
+            ui->lb_13->setPixmap(caso);
+            ui->lb_14->setPixmap(caso);
+            ui->lb_15->setPixmap(caso);
+            ui->lb_16->setPixmap(caso);
+            ui->lb_17->setPixmap(caso);
+            ui->lb_18->setPixmap(caso);
+            ui->lb_19->setPixmap(caso);
+            ui->lb_20->setPixmap(caso);
+            ui->lb_21->setPixmap(caso);
+            ui->lb_22->setPixmap(caso);
+            ui->lb_23->setPixmap(caso);
+            ui->lb_24->setPixmap(caso);
+
         }
     }
     if(casillaActual-casillaSiguiente == -10){
         for (int i = 0; i < 80; ++i) {
             moverGladiador1Abajo(ui->G1->x(),ui->G1->y());
+            QString caso = ":/transparente.png";
+            ui->lb->setPixmap(caso);
+            ui->lb_2->setPixmap(caso);
+            ui->lb_3->setPixmap(caso);
+            ui->lb_4->setPixmap(caso);
+            ui->lb_5->setPixmap(caso);
+            ui->lb_6->setPixmap(caso);
+            ui->lb_7->setPixmap(caso);
+            ui->lb_8->setPixmap(caso);
+            ui->lb_9->setPixmap(caso);
+            ui->lb_10->setPixmap(caso);
+            ui->lb_11->setPixmap(caso);
+            ui->lb_12->setPixmap(caso);
+            ui->lb_13->setPixmap(caso);
+            ui->lb_14->setPixmap(caso);
+            ui->lb_15->setPixmap(caso);
+            ui->lb_16->setPixmap(caso);
+            ui->lb_17->setPixmap(caso);
+            ui->lb_18->setPixmap(caso);
+            ui->lb_19->setPixmap(caso);
+            ui->lb_20->setPixmap(caso);
+            ui->lb_21->setPixmap(caso);
+            ui->lb_22->setPixmap(caso);
+            ui->lb_23->setPixmap(caso);
+            ui->lb_24->setPixmap(caso);
+
         }
     }
 
@@ -570,24 +681,28 @@ void MainWindow::mover1(int casillaActual, int casillaSiguiente){
 
 
 void MainWindow::moverGladiador2Abajo(int x, int y){
-
-            ui->G2->setGeometry(x,y+1,25,25);
+    QString caso = ":/glad2delante.png";
+    ui->G2->setGeometry(x,y+1,25,25);
+    ui->G2->setPixmap(caso);
 }
 
 void MainWindow::moverGladiador2Arriba(int x, int y){
-
-            ui->G2->setGeometry(x,y-1,25,25);
+    QString caso = ":/glad2atras.png";
+    ui->G2->setGeometry(x,y-1,25,25);
+    ui->G2->setPixmap(caso);
 
 }
 void MainWindow::moverGladiador2Derecha(int x, int y){
-
-            ui->G2->setGeometry(x+1,y,25,25);
+    QString caso = ":/glad2dere.png";
+    ui->G2->setGeometry(x+1,y,25,25);
+    ui->G2->setPixmap(caso);
 
 }
 
 void MainWindow::moverGladiador2Izquierda(int x, int y){
-
-            ui->G2->setGeometry(x-1,y,25,25);
+    QString caso = ":/glad2izq.png";
+    ui->G2->setGeometry(x-1,y,25,25);
+    ui->G2->setPixmap(caso);
 
 }
 
@@ -596,25 +711,822 @@ void MainWindow::mover2(int casillaActual, int casillaSiguiente){
     if(casillaActual-casillaSiguiente == 1){
         for (int i = 0; i < 80; ++i) {
             moverGladiador2Izquierda(ui->G2->x(),ui->G2->y());
+            QString caso = ":/transparente.png";
+            ui->lb->setPixmap(caso);
+            ui->lb_2->setPixmap(caso);
+            ui->lb_3->setPixmap(caso);
+            ui->lb_4->setPixmap(caso);
+            ui->lb_5->setPixmap(caso);
+            ui->lb_6->setPixmap(caso);
+            ui->lb_7->setPixmap(caso);
+            ui->lb_8->setPixmap(caso);
+            ui->lb_9->setPixmap(caso);
+            ui->lb_10->setPixmap(caso);
+            ui->lb_11->setPixmap(caso);
+            ui->lb_12->setPixmap(caso);
+            ui->lb_13->setPixmap(caso);
+            ui->lb_14->setPixmap(caso);
+            ui->lb_15->setPixmap(caso);
+            ui->lb_16->setPixmap(caso);
+            ui->lb_17->setPixmap(caso);
+            ui->lb_18->setPixmap(caso);
+            ui->lb_19->setPixmap(caso);
+            ui->lb_20->setPixmap(caso);
+            ui->lb_21->setPixmap(caso);
+            ui->lb_22->setPixmap(caso);
+            ui->lb_23->setPixmap(caso);
+            ui->lb_24->setPixmap(caso);
+
         }
 
     }
     if(casillaActual-casillaSiguiente == -1){
         for (int i = 0; i < 80; ++i) {
              moverGladiador2Derecha(ui->G2->x(),ui->G2->y());
+             QString caso = ":/transparente.png";
+             ui->lb->setPixmap(caso);
+             ui->lb_2->setPixmap(caso);
+             ui->lb_3->setPixmap(caso);
+             ui->lb_4->setPixmap(caso);
+             ui->lb_5->setPixmap(caso);
+             ui->lb_6->setPixmap(caso);
+             ui->lb_7->setPixmap(caso);
+             ui->lb_8->setPixmap(caso);
+             ui->lb_9->setPixmap(caso);
+             ui->lb_10->setPixmap(caso);
+             ui->lb_11->setPixmap(caso);
+             ui->lb_12->setPixmap(caso);
+             ui->lb_13->setPixmap(caso);
+             ui->lb_14->setPixmap(caso);
+             ui->lb_15->setPixmap(caso);
+             ui->lb_16->setPixmap(caso);
+             ui->lb_17->setPixmap(caso);
+             ui->lb_18->setPixmap(caso);
+             ui->lb_19->setPixmap(caso);
+             ui->lb_20->setPixmap(caso);
+             ui->lb_21->setPixmap(caso);
+             ui->lb_22->setPixmap(caso);
+             ui->lb_23->setPixmap(caso);
+             ui->lb_24->setPixmap(caso);
+
         }
     }
     if(casillaActual-casillaSiguiente == 10){
         for (int i = 0; i < 80; ++i) {
             moverGladiador2Arriba(ui->G2->x(),ui->G2->y());
+            QString caso = ":/transparente.png";
+            ui->lb->setPixmap(caso);
+            ui->lb_2->setPixmap(caso);
+            ui->lb_3->setPixmap(caso);
+            ui->lb_4->setPixmap(caso);
+            ui->lb_5->setPixmap(caso);
+            ui->lb_6->setPixmap(caso);
+            ui->lb_7->setPixmap(caso);
+            ui->lb_8->setPixmap(caso);
+            ui->lb_9->setPixmap(caso);
+            ui->lb_10->setPixmap(caso);
+            ui->lb_11->setPixmap(caso);
+            ui->lb_12->setPixmap(caso);
+            ui->lb_13->setPixmap(caso);
+            ui->lb_14->setPixmap(caso);
+            ui->lb_15->setPixmap(caso);
+            ui->lb_16->setPixmap(caso);
+            ui->lb_17->setPixmap(caso);
+            ui->lb_18->setPixmap(caso);
+            ui->lb_19->setPixmap(caso);
+            ui->lb_20->setPixmap(caso);
+            ui->lb_21->setPixmap(caso);
+            ui->lb_22->setPixmap(caso);
+            ui->lb_23->setPixmap(caso);
+            ui->lb_24->setPixmap(caso);
+
         }
     }
     if(casillaActual-casillaSiguiente == -10){
         for (int i = 0; i < 80; ++i) {
             moverGladiador2Abajo(ui->G2->x(),ui->G2->y());
+            QString caso = ":/transparente.png";
+            ui->lb->setPixmap(caso);
+            ui->lb_2->setPixmap(caso);
+            ui->lb_3->setPixmap(caso);
+            ui->lb_4->setPixmap(caso);
+            ui->lb_5->setPixmap(caso);
+            ui->lb_6->setPixmap(caso);
+            ui->lb_7->setPixmap(caso);
+            ui->lb_8->setPixmap(caso);
+            ui->lb_9->setPixmap(caso);
+            ui->lb_10->setPixmap(caso);
+            ui->lb_11->setPixmap(caso);
+            ui->lb_12->setPixmap(caso);
+            ui->lb_13->setPixmap(caso);
+            ui->lb_14->setPixmap(caso);
+            ui->lb_15->setPixmap(caso);
+            ui->lb_16->setPixmap(caso);
+            ui->lb_17->setPixmap(caso);
+            ui->lb_18->setPixmap(caso);
+            ui->lb_19->setPixmap(caso);
+            ui->lb_20->setPixmap(caso);
+            ui->lb_21->setPixmap(caso);
+            ui->lb_22->setPixmap(caso);
+            ui->lb_23->setPixmap(caso);
+            ui->lb_24->setPixmap(caso);
+
         }
     }
 
+}
+
+void MainWindow::atacarTorreFuegoAG1(int casillaTorre, int casillaGladiador){
+
+    QString caso1 = ":/ff0.png";
+    QString caso2 = ":/ff45.png";
+    QString caso3 = ":/ff90.png";
+    QString caso4 = ":/ff135.png";
+    QString caso5 = ":/ff180.png";
+    QString caso6 = ":/ff225.png";
+    QString caso7 = ":/ff270.png";
+    QString caso8 = ":/ff315.png";
+
+    if(casillaTorre-casillaGladiador == 22){
+        ui->lb_15->setPixmap(caso4);
+        ui->lb_15->setGeometry(ui->G1->x(),ui->G1->y(),50,50);
+    }
+    if(casillaTorre-casillaGladiador == 21){
+        ui->lb_14->setPixmap(caso4);
+        ui->lb_14->setGeometry(ui->G1->x(),ui->G1->y(),50,50);
+    }
+    if(casillaTorre-casillaGladiador == 20){
+        ui->lb_13->setPixmap(caso3);
+        ui->lb_13->setGeometry(ui->G1->x()-10,ui->G1->y(),50,50);
+    }
+    if(casillaTorre-casillaGladiador == 19){
+        ui->lb_12->setPixmap(caso2);
+        ui->lb_12->setGeometry(ui->G1->x()-20,ui->G1->y(),50,50);
+    }
+    if(casillaTorre-casillaGladiador == 18){
+
+        ui->lb_11->setPixmap(caso2);
+        ui->lb_11->setGeometry(ui->G1->x()-20,ui->G1->y(),50,50);
+    }
+    if(casillaTorre-casillaGladiador == 12){
+        ui->lb_16->setPixmap(caso4);
+        ui->lb_16->setGeometry(ui->G1->x(),ui->G1->y(),50,50);
+    }
+
+    if(casillaTorre-casillaGladiador == 11){
+        ui->lb_4->setPixmap(caso4);
+        ui->lb_4->setGeometry(ui->G1->x(),ui->G1->y(),50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == 10){
+        ui->lb_3->setPixmap(caso3);
+        ui->lb_3->setGeometry(ui->G1->x()-10,ui->G1->y(),50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == 9){
+        ui->lb_2->setPixmap(caso2);
+        ui->lb_2->setGeometry(ui->G1->x()-20,ui->G1->y(),50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == 8){
+        ui->lb_10->setPixmap(caso2);
+        ui->lb_10->setGeometry(ui->G1->x()-20,ui->G1->y(),50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == 2){
+        ui->lb_17->setPixmap(caso5);
+        ui->lb_17->setGeometry(ui->G1->x()+10,ui->G1->y(),50,50);
+
+
+    }
+    if(casillaTorre-casillaGladiador == 1){
+        ui->lb_5->setPixmap(caso2);
+        ui->lb_5->setGeometry(ui->G1->x()+10,ui->G1->y(),50,50);
+
+    }
+
+    if(casillaTorre-casillaGladiador == -1){
+        ui->lb->setPixmap(caso1);
+        ui->lb->setGeometry(ui->G1->x()-30,ui->G1->y()-10,50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == -2){
+        ui->lb_4->setPixmap(caso1);
+        ui->lb_4->setGeometry(ui->G1->x()-30,ui->G1->y()-10,50,50);
+
+
+    }
+    if(casillaTorre-casillaGladiador == -8){
+        ui->lb_18->setPixmap(caso6);
+        ui->lb_18->setGeometry(ui->G1->x(),ui->G1->y()-20,50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == -9){
+        ui->lb_6->setPixmap(caso6);
+        ui->lb_6->setGeometry(ui->G1->x(),ui->G1->y()-20,50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == -10){
+        ui->lb_7->setPixmap(caso7);
+        ui->lb_7->setGeometry(ui->G1->x()-10,ui->G1->y(),50,50);
+
+
+    }
+    if(casillaTorre-casillaGladiador == -11){
+        ui->lb_8->setPixmap(caso8);
+        ui->lb_8->setGeometry(ui->G1->x()-20,ui->G1->y(),50,50);
+
+    }
+
+    if(casillaTorre-casillaGladiador == -12){
+        ui->lb_24->setPixmap(caso8);
+        ui->lb_24->setGeometry(ui->G1->x()-20,ui->G1->y(),50,50);
+
+
+    }
+    if(casillaTorre-casillaGladiador == -18){
+        ui->lb_19->setPixmap(caso6);
+        ui->lb_19->setGeometry(ui->G1->x(),ui->G1->y()-20,50,50);
+
+
+    }
+    if(casillaTorre-casillaGladiador == -19){
+        ui->lb_20->setPixmap(caso6);
+        ui->lb_20->setGeometry(ui->G1->x(),ui->G1->y()-20,50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == -20){
+        ui->lb_21->setPixmap(caso7);
+        ui->lb_21->setGeometry(ui->G1->x()-10,ui->G1->y(),50,50);
+
+
+    }
+    if(casillaTorre-casillaGladiador == -21){
+        ui->lb_22->setPixmap(caso8);
+        ui->lb_22->setGeometry(ui->G1->x()-20,ui->G1->y(),50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == -22){
+        ui->lb_23->setPixmap(caso8);
+        ui->lb_23->setGeometry(ui->G1->x()-20,ui->G1->y(),50,50);
+
+
+    }
+}
+
+void MainWindow::atacarTorreSencillaAG1(int casillaTorre, int casillaGladiador){
+
+    QString caso1 = ":/fs0.png";
+    QString caso2 = ":/fs45.png";
+    QString caso3 = ":/fs90.png";
+    QString caso4 = ":/fs135.png";
+    QString caso5 = ":/fs180.png";
+    QString caso6 = ":/fs225.png";
+    QString caso7 = ":/fs270.png";
+    QString caso8 = ":/fs315.png";
+
+    if(casillaTorre-casillaGladiador == 11){
+        ui->lb_4->setPixmap(caso4);
+        ui->lb_4->setGeometry(ui->G1->x(),ui->G1->y(),50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == 10){
+        ui->lb_3->setPixmap(caso3);
+        ui->lb_3->setGeometry(ui->G1->x()-10,ui->G1->y(),50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == 9){
+        ui->lb_2->setPixmap(caso2);
+        ui->lb_2->setGeometry(ui->G1->x()-20,ui->G1->y(),50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == 8){
+        ui->lb_10->setPixmap(caso2);
+        ui->lb_10->setGeometry(ui->G1->x()-20,ui->G1->y(),50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == 2){
+        ui->lb_17->setPixmap(caso5);
+        ui->lb_17->setGeometry(ui->G1->x()+10,ui->G1->y(),50,50);
+
+
+    }
+    if(casillaTorre-casillaGladiador == 1){
+        ui->lb_5->setPixmap(caso2);
+        ui->lb_5->setGeometry(ui->G1->x()+10,ui->G1->y(),50,50);
+
+    }
+
+    if(casillaTorre-casillaGladiador == -1){
+        ui->lb->setPixmap(caso1);
+        ui->lb->setGeometry(ui->G1->x()-30,ui->G1->y()-10,50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == -2){
+        ui->lb_4->setPixmap(caso1);
+        ui->lb_4->setGeometry(ui->G1->x()-30,ui->G1->y()-10,50,50);
+
+
+    }
+    if(casillaTorre-casillaGladiador == -8){
+        ui->lb_18->setPixmap(caso6);
+        ui->lb_18->setGeometry(ui->G1->x(),ui->G1->y()-20,50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == -9){
+        ui->lb_6->setPixmap(caso6);
+        ui->lb_6->setGeometry(ui->G1->x(),ui->G1->y()-20,50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == -10){
+        ui->lb_7->setPixmap(caso7);
+        ui->lb_7->setGeometry(ui->G1->x()-10,ui->G1->y(),50,50);
+
+
+    }
+    if(casillaTorre-casillaGladiador == -11){
+        ui->lb_8->setPixmap(caso8);
+        ui->lb_8->setGeometry(ui->G1->x()-20,ui->G1->y(),50,50);
+
+    }
+}
+
+void MainWindow::atacarTorreExplosivaAG1(int casillaTorre, int casillaGladiador){
+
+    QString caso1 = ":/fe0.png";
+    QString caso2 = ":/fe45.png";
+    QString caso3 = ":/fe90.png";
+    QString caso4 = ":/fe135.png";
+
+    if(casillaTorre-casillaGladiador == 22){
+        ui->lb_15->setPixmap(caso4);
+        ui->lb_15->setGeometry(ui->G1->x(),ui->G1->y(),50,50);
+    }
+    if(casillaTorre-casillaGladiador == 21){
+        ui->lb_14->setPixmap(caso4);
+        ui->lb_14->setGeometry(ui->G1->x(),ui->G1->y(),50,50);
+    }
+    if(casillaTorre-casillaGladiador == 20){
+        ui->lb_13->setPixmap(caso3);
+        ui->lb_13->setGeometry(ui->G1->x()-10,ui->G1->y()+10,50,50);
+    }
+    if(casillaTorre-casillaGladiador == 19){
+        ui->lb_12->setPixmap(caso2);
+        ui->lb_12->setGeometry(ui->G1->x()-20,ui->G1->y(),50,50);
+    }
+    if(casillaTorre-casillaGladiador == 18){
+        ui->lb_11->setPixmap(caso2);
+        ui->lb_11->setGeometry(ui->G1->x()-20,ui->G1->y(),50,50);
+    }
+    if(casillaTorre-casillaGladiador == 12){
+        ui->lb_16->setPixmap(caso4);
+        ui->lb_16->setGeometry(ui->G1->x(),ui->G1->y(),50,50);
+    }
+
+    if(casillaTorre-casillaGladiador == 11){
+        ui->lb_4->setPixmap(caso4);
+        ui->lb_4->setGeometry(ui->G1->x(),ui->G1->y(),50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == 10){
+        ui->lb_3->setPixmap(caso3);
+        ui->lb_3->setGeometry(ui->G1->x()-10,ui->G1->y()+10,50,50);
+    }
+    if(casillaTorre-casillaGladiador == 9){
+        ui->lb_2->setPixmap(caso2);
+        ui->lb_2->setGeometry(ui->G1->x()-20,ui->G1->y(),50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == 8){
+        ui->lb_10->setPixmap(caso2);
+        ui->lb_10->setGeometry(ui->G1->x()-20,ui->G1->y(),50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == 2){
+        ui->lb_17->setPixmap(caso1);
+        ui->lb_17->setGeometry(ui->G1->x()+10,ui->G1->y()-10,50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == 1){
+        ui->lb_5->setPixmap(caso1);
+        ui->lb_5->setGeometry(ui->G1->x()+10,ui->G1->y()-10,50,50);
+    }
+
+    if(casillaTorre-casillaGladiador == -1){
+        ui->lb->setPixmap(caso1);
+        ui->lb->setGeometry(ui->G1->x()-30,ui->G1->y()-10,50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == -2){
+        ui->lb_9->setPixmap(caso1);
+        ui->lb_9->setGeometry(ui->G1->x()-30,ui->G1->y()-10,50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == -8){
+        ui->lb_18->setPixmap(caso2);
+        ui->lb_18->setGeometry(ui->G1->x(),ui->G1->y()-20,50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == -9){
+        ui->lb_6->setPixmap(caso2);
+        ui->lb_6->setGeometry(ui->G1->x(),ui->G1->y()-20,50,50);
+    }
+    if(casillaTorre-casillaGladiador == -10){
+        ui->lb_7->setPixmap(caso3);
+        ui->lb_7->setGeometry(ui->G1->x()-10,ui->G1->y()+10,50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == -11){
+        ui->lb_8->setPixmap(caso4);
+        ui->lb_8->setGeometry(ui->G1->x()-20,ui->G1->y()-20,50,50);
+    }
+
+    if(casillaTorre-casillaGladiador == -12){
+        ui->lb_24->setPixmap(caso4);
+        ui->lb_24->setGeometry(ui->G1->x()-20,ui->G1->y(),50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == -18){
+        ui->lb_19->setPixmap(caso2);
+        ui->lb_19->setGeometry(ui->G1->x(),ui->G1->y()-20,50,50);
+    }
+    if(casillaTorre-casillaGladiador == -19){
+        ui->lb_20->setPixmap(caso2);
+        ui->lb_20->setGeometry(ui->G1->x(),ui->G1->y()-20,50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == -20){
+        ui->lb_21->setPixmap(caso3);
+        ui->lb_21->setGeometry(ui->G1->x()-10,ui->G1->y()+10,50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == -21){
+        ui->lb_22->setPixmap(caso4);
+        ui->lb_22->setGeometry(ui->G1->x()-20,ui->G1->y(),50,50);
+    }
+    if(casillaTorre-casillaGladiador == -22){
+        ui->lb_23->setPixmap(caso4);
+        ui->lb_23->setGeometry(ui->G1->x()-20,ui->G1->y(),50,50);
+
+    }
+}
+
+void MainWindow::atacarTorreExplosivaAG2(int casillaTorre, int casillaGladiador){
+
+    QString caso1 = ":/fe0.png";
+    QString caso2 = ":/fe45.png";
+    QString caso3 = ":/fe90.png";
+    QString caso4 = "/:fe135.png";
+
+
+    if(casillaTorre-casillaGladiador == 22){
+        ui->lb_15->setPixmap(caso4);
+        ui->lb_15->setGeometry(ui->G2->x(),ui->G2->y(),50,50);
+    }
+    if(casillaTorre-casillaGladiador == 21){
+        ui->lb_14->setPixmap(caso4);
+        ui->lb_14->setGeometry(ui->G2->x(),ui->G2->y(),50,50);
+    }
+    if(casillaTorre-casillaGladiador == 20){
+        ui->lb_13->setPixmap(caso3);
+        ui->lb_13->setGeometry(ui->G2->x()-10,ui->G2->y(),50,50);
+    }
+    if(casillaTorre-casillaGladiador == 19){
+        ui->lb_12->setPixmap(caso2);
+        ui->lb_12->setGeometry(ui->G2->x()-20,ui->G2->y(),50,50);
+    }
+    if(casillaTorre-casillaGladiador == 18){
+        ui->lb_11->setPixmap(caso2);
+        ui->lb_11->setGeometry(ui->G2->x()-20,ui->G2->y(),50,50);
+    }
+    if(casillaTorre-casillaGladiador == 12){
+        ui->lb_16->setPixmap(caso4);
+        ui->lb_16->setGeometry(ui->G2->x(),ui->G2->y(),50,50);
+    }
+
+    if(casillaTorre-casillaGladiador == 11){
+        ui->lb_4->setPixmap(caso4);
+        ui->lb_4->setGeometry(ui->G2->x(),ui->G2->y(),50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == 10){
+        ui->lb_3->setPixmap(caso3);
+        ui->lb_3->setGeometry(ui->G2->x()-10,ui->G2->y(),50,50);
+    }
+    if(casillaTorre-casillaGladiador == 9){
+        ui->lb_2->setPixmap(caso2);
+        ui->lb_2->setGeometry(ui->G2->x()-20,ui->G2->y(),50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == 8){
+        ui->lb_10->setPixmap(caso2);
+        ui->lb_10->setGeometry(ui->G2->x()-20,ui->G2->y(),50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == 2){
+        ui->lb_17->setPixmap(caso1);
+        ui->lb_17->setGeometry(ui->G2->x()+10,ui->G2->y(),50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == 1){
+        ui->lb_5->setPixmap(caso1);
+        ui->lb_5->setGeometry(ui->G2->x()+10,ui->G2->y(),50,50);
+    }
+
+    if(casillaTorre-casillaGladiador == -1){
+        ui->lb->setPixmap(caso1);
+        ui->lb->setGeometry(ui->G2->x()-30,ui->G2->y()-10,50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == -2){
+        ui->lb_9->setPixmap(caso1);
+        ui->lb_9->setGeometry(ui->G2->x()-30,ui->G2->y()-10,50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == -8){
+        ui->lb_18->setPixmap(caso2);
+        ui->lb_18->setGeometry(ui->G2->x(),ui->G2->y()-20,50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == -9){
+        ui->lb_6->setPixmap(caso2);
+        ui->lb_6->setGeometry(ui->G2->x(),ui->G2->y()-20,50,50);
+    }
+    if(casillaTorre-casillaGladiador == -10){
+        ui->lb_7->setPixmap(caso3);
+        ui->lb_7->setGeometry(ui->G2->x()-10,ui->G2->y(),50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == -11){
+        ui->lb_8->setPixmap(caso4);
+        ui->lb_8->setGeometry(ui->G2->x()-20,ui->G2->y(),50,50);
+    }
+
+    if(casillaTorre-casillaGladiador == -12){
+        ui->lb_24->setPixmap(caso4);
+        ui->lb_24->setGeometry(ui->G2->x()-20,ui->G2->y(),50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == -18){
+        ui->lb_19->setPixmap(caso2);
+        ui->lb_19->setGeometry(ui->G2->x(),ui->G2->y()-20,50,50);
+    }
+    if(casillaTorre-casillaGladiador == -19){
+        ui->lb_20->setPixmap(caso2);
+        ui->lb_20->setGeometry(ui->G2->x(),ui->G2->y()-20,50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == -20){
+        ui->lb_21->setPixmap(caso3);
+        ui->lb_21->setGeometry(ui->G2->x()-10,ui->G2->y(),50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == -21){
+        ui->lb_22->setPixmap(caso4);
+        ui->lb_22->setGeometry(ui->G2->x()-20,ui->G2->y(),50,50);
+    }
+    if(casillaTorre-casillaGladiador == -22){
+        ui->lb_23->setPixmap(caso4);
+        ui->lb_23->setGeometry(ui->G2->x()-20,ui->G2->y(),50,50);
+
+    }
+}
+
+void MainWindow::atacarTorreSencillaAG2(int casillaTorre, int casillaGladiador){
+
+    QString caso1 = ":/fs0.png";
+    QString caso2 = ":/fs45.png";
+    QString caso3 = ":/fs90.png";
+    QString caso4 = ":/fs135.png";
+    QString caso5 = ":/fs180.png";
+    QString caso6 = ":/fs225.png";
+    QString caso7 = ":/fs270.png";
+    QString caso8 = ":/fs315.png";
+
+    if(casillaTorre-casillaGladiador == 11){
+        ui->lb_4->setPixmap(caso4);
+        ui->lb_4->setGeometry(ui->G2->x(),ui->G2->y(),50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == 10){
+        ui->lb_3->setPixmap(caso3);
+        ui->lb_3->setGeometry(ui->G2->x()-10,ui->G2->y(),50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == 9){
+        ui->lb_2->setPixmap(caso2);
+        ui->lb_2->setGeometry(ui->G2->x()-20,ui->G2->y(),50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == 8){
+        ui->lb_10->setPixmap(caso2);
+        ui->lb_10->setGeometry(ui->G2->x()-20,ui->G2->y(),50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == 2){
+        ui->lb_17->setPixmap(caso5);
+        ui->lb_17->setGeometry(ui->G2->x()+10,ui->G2->y(),50,50);
+
+
+    }
+    if(casillaTorre-casillaGladiador == 1){
+        ui->lb_5->setPixmap(caso2);
+        ui->lb_5->setGeometry(ui->G2->x()+10,ui->G2->y(),50,50);
+
+    }
+
+    if(casillaTorre-casillaGladiador == -1){
+        ui->lb->setPixmap(caso1);
+        ui->lb->setGeometry(ui->G2->x()-30,ui->G2->y()-10,50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == -2){
+        ui->lb_4->setPixmap(caso1);
+        ui->lb_4->setGeometry(ui->G2->x()-30,ui->G2->y()-10,50,50);
+
+
+    }
+    if(casillaTorre-casillaGladiador == -8){
+        ui->lb_18->setPixmap(caso6);
+        ui->lb_18->setGeometry(ui->G2->x(),ui->G2->y()-20,50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == -9){
+        ui->lb_6->setPixmap(caso6);
+        ui->lb_6->setGeometry(ui->G2->x(),ui->G2->y()-20,50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == -10){
+        ui->lb_7->setPixmap(caso7);
+        ui->lb_7->setGeometry(ui->G2->x()-10,ui->G2->y(),50,50);
+
+
+    }
+    if(casillaTorre-casillaGladiador == -11){
+        ui->lb_8->setPixmap(caso8);
+        ui->lb_8->setGeometry(ui->G2->x()-20,ui->G2->y(),50,50);
+
+    }
+}
+
+void MainWindow::atacarTorreFuegoAG2(int casillaTorre, int casillaGladiador){
+
+    QString caso1 = ":/ff0.png";
+    QString caso2 = ":/ff45.png";
+    QString caso3 = ":/ff90.png";
+    QString caso4 = ":/ff135.png";
+    QString caso5 = ":/ff180.png";
+    QString caso6 = ":/ff225.png";
+    QString caso7 = ":/ff270.png";
+    QString caso8 = ":/ff315.png";
+
+    if(casillaTorre-casillaGladiador == 22){
+        ui->lb_15->setPixmap(caso4);
+        ui->lb_15->setGeometry(ui->G2->x(),ui->G2->y(),50,50);
+    }
+    if(casillaTorre-casillaGladiador == 21){
+        ui->lb_14->setPixmap(caso4);
+        ui->lb_14->setGeometry(ui->G2->x(),ui->G2->y(),50,50);
+    }
+    if(casillaTorre-casillaGladiador == 20){
+        ui->lb_13->setPixmap(caso3);
+        ui->lb_13->setGeometry(ui->G2->x()-10,ui->G2->y(),50,50);
+    }
+    if(casillaTorre-casillaGladiador == 19){
+        ui->lb_12->setPixmap(caso2);
+        ui->lb_12->setGeometry(ui->G2->x()-20,ui->G2->y(),50,50);
+    }
+    if(casillaTorre-casillaGladiador == 18){
+
+        ui->lb_11->setPixmap(caso2);
+        ui->lb_11->setGeometry(ui->G2->x()-20,ui->G2->y(),50,50);
+    }
+    if(casillaTorre-casillaGladiador == 12){
+        ui->lb_16->setPixmap(caso4);
+        ui->lb_16->setGeometry(ui->G2->x(),ui->G2->y(),50,50);
+    }
+
+    if(casillaTorre-casillaGladiador == 11){
+        ui->lb_4->setPixmap(caso4);
+        ui->lb_4->setGeometry(ui->G1->x(),ui->G1->y(),50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == 10){
+        ui->lb_3->setPixmap(caso3);
+        ui->lb_3->setGeometry(ui->G2->x()-10,ui->G2->y(),50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == 9){
+        ui->lb_2->setPixmap(caso2);
+        ui->lb_2->setGeometry(ui->G2->x()-20,ui->G2->y(),50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == 8){
+        ui->lb_10->setPixmap(caso2);
+        ui->lb_10->setGeometry(ui->G2->x()-20,ui->G2->y(),50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == 2){
+        ui->lb_17->setPixmap(caso5);
+        ui->lb_17->setGeometry(ui->G2->x()+10,ui->G2->y(),50,50);
+
+
+    }
+    if(casillaTorre-casillaGladiador == 1){
+        ui->lb_5->setPixmap(caso2);
+        ui->lb_5->setGeometry(ui->G2->x()+10,ui->G2->y(),50,50);
+
+    }
+
+    if(casillaTorre-casillaGladiador == -1){
+        ui->lb->setPixmap(caso1);
+        ui->lb->setGeometry(ui->G2->x()-30,ui->G2->y()-10,50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == -2){
+        ui->lb_4->setPixmap(caso1);
+        ui->lb_4->setGeometry(ui->G2->x()-30,ui->G2->y()-10,50,50);
+
+
+    }
+    if(casillaTorre-casillaGladiador == -8){
+        ui->lb_18->setPixmap(caso6);
+        ui->lb_18->setGeometry(ui->G2->x(),ui->G2->y()-20,50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == -9){
+        ui->lb_6->setPixmap(caso6);
+        ui->lb_6->setGeometry(ui->G2->x(),ui->G2->y()-20,50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == -10){
+        ui->lb_7->setPixmap(caso7);
+        ui->lb_7->setGeometry(ui->G2->x()-10,ui->G2->y(),50,50);
+
+
+    }
+    if(casillaTorre-casillaGladiador == -11){
+        ui->lb_8->setPixmap(caso8);
+        ui->lb_8->setGeometry(ui->G2->x()-20,ui->G2->y(),50,50);
+
+    }
+
+    if(casillaTorre-casillaGladiador == -12){
+        ui->lb_24->setPixmap(caso8);
+        ui->lb_24->setGeometry(ui->G2->x()-20,ui->G2->y(),50,50);
+
+
+    }
+    if(casillaTorre-casillaGladiador == -18){
+        ui->lb_19->setPixmap(caso6);
+        ui->lb_19->setGeometry(ui->G2->x(),ui->G2->y()-20,50,50);
+
+
+    }
+    if(casillaTorre-casillaGladiador == -19){
+        ui->lb_20->setPixmap(caso6);
+        ui->lb_20->setGeometry(ui->G2->x(),ui->G2->y()-20,50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == -20){
+        ui->lb_21->setPixmap(caso7);
+        ui->lb_21->setGeometry(ui->G2->x()-10,ui->G2->y(),50,50);
+
+
+    }
+    if(casillaTorre-casillaGladiador == -21){
+        ui->lb_22->setPixmap(caso8);
+        ui->lb_22->setGeometry(ui->G2->x()-20,ui->G2->y(),50,50);
+
+    }
+    if(casillaTorre-casillaGladiador == -22){
+        ui->lb_23->setPixmap(caso8);
+        ui->lb_23->setGeometry(ui->G2->x()-20,ui->G2->y(),50,50);
+
+
+    }
+}
+
+
+void MainWindow:: atacar(QString gladiador, QString torre, int casillaTorre, int casillaGladiador){
+    if(gladiador == "g1" && torre == "sencilla"){
+        atacarTorreSencillaAG1(casillaTorre,casillaGladiador);
+    }
+    if(gladiador == "g1" && torre == "fuego"){
+        atacarTorreFuegoAG1(casillaTorre,casillaGladiador);
+    }
+    if(gladiador == "g1" && torre == "explosiva"){
+        atacarTorreExplosivaAG1(casillaTorre,casillaGladiador);
+    }
+    if(gladiador == "g2" && torre == "sencilla"){
+        atacarTorreSencillaAG2(casillaTorre,casillaGladiador);
+    }
+    if(gladiador == "g2" && torre == "fuego"){
+        atacarTorreFuegoAG2(casillaTorre,casillaGladiador);
+    }
+    if(gladiador == "g2" && torre == "explosiva"){
+        atacarTorreExplosivaAG2(casillaTorre,casillaGladiador);
+    }
 }
 
 void MainWindow::on_pushButton_clicked()
