@@ -10,6 +10,9 @@
 #include "ListaTorres.h"
 #include "boost/property_tree/xml_parser.hpp"
 #include "matriz.h"
+#include "ListaGladiadores.h"
+#include "AlgoritmoGenetico.h"
+
 
 class Simulacion {
 public:
@@ -39,13 +42,19 @@ public:
     * */
     ListaTorres lt;
     /**
-    *@brief  metodo para retornar las torres formato json
+    *@brief  metodo para retornar las torres formato xml
 
     * */
     std::string &getTorre() ;
-private:
-    Matriz mat =Matriz(10,10);
+    /**
+    *@brief  metodo para generar los nuevos gladiadores
 
+    * */
+    void gladiadoresGeneraciones();
+private:
+    AlgoritmoGenetico vida =AlgoritmoGenetico();
+    ListaGladiadores* back = new ListaGladiadores();
+    ListaGladiadores* AStar = new ListaGladiadores();
     std::string torre,gladiar;
 };
 

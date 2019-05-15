@@ -21,6 +21,7 @@ public:
     ~MainWindow();
 
 public:
+    bool GenOne= true;
     void addTorre(int pos,int tipo);
     QString getTorre(int caso);
     clientHandler cl;

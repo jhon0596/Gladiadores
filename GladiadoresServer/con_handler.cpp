@@ -77,6 +77,7 @@ void con_handler::operaciones() {
         this->message="";
         this->data =" ";
     }else if(this->data=="g"){
+        s1.crearGladiadores();
         std::string men=s1.getGlad()+"\n";
         sock.async_write_some(
                 boost::asio::buffer(men, max_length),
@@ -85,6 +86,22 @@ void con_handler::operaciones() {
                             boost::asio::placeholders::error,
                             boost::asio::placeholders::bytes_transferred));
     }
+    else if(this->data=="G"){
+        s1.gladiadoresGeneraciones();
+        this->message=s1.getGlad()+"\n";
+
+        sock.async_write_some(
+                boost::asio::buffer(this->message, max_length),
+                boost::bind(&con_handler::handle_write,
+                            shared_from_this(),
+                            boost::asio::placeholders::error,
+                            boost::asio::placeholders::bytes_transferred));
+
+
+        this->message="";
+        this->data =" ";
+    }
+
     else{
         this->message="mensaje incorrecto";
 

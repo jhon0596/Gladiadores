@@ -9,6 +9,7 @@
 #include "Utilities.h"
 
 class AlgoritmoGenetico {
+public:
     AlgoritmoGenetico();
     void swap(NodoGladiador *a, NodoGladiador *b);
     void bubbleSort(ListaGladiadores *start);

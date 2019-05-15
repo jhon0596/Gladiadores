@@ -81,9 +81,9 @@ std::string Gladiador::display() {
 
         }else{
             j=0;
-            sal.append(this->txt[caract]+" ");
-            sal.append(std::to_string(tmp.to_ulong())+" ");
-
+            //sal.append(this->txt[caract]+" ");
+            //sal.append(std::to_string(tmp.to_ulong())+" ");
+            atributo[caract]=tmp.to_ulong();
             tmp.reset();
             tmp[j]=set18[i];
             j++,caract++;

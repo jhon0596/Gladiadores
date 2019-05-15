@@ -18,7 +18,7 @@ public:
     int atributos;
 
     std::string unTag;
-
+    int  atributo[5];
     std::string retCli();
     void fillSPECIAL();
     std::string txt[5]={"edad","condicion fisica","fuerza tronco superior","fuerza tronco inferior","condicion emocional"};

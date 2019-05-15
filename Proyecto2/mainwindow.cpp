@@ -370,15 +370,30 @@ void MainWindow::leerXML()
     }
     else if(cl.propSev.get<std::string>("id")=="LG"){
         QString info=" ";
+        int glad=1;
         //aqui debe de ir la info de los gladiadores
         BOOST_FOREACH( ptree::value_type & v,cl.propSev.get_child("lista")){
+
             if(v.first=="gladiador"){
+                info.append("tag " + QString::fromStdString(v.second.get<std::string>("tag"))+"\n");
                 info.append("Edad "+QString::number(v.second.get<int>("e"))+"\n");
                 info.append("Condicion fisica:"+QString::number(v.second.get<int>("conf"))+"\n");
                 info.append("Fuerza Tronco Superior:"+QString::number(v.second.get<int>("trsup"))+"\n");
                 info.append("Fuerza Tronco Inferior:"+QString::number(v.second.get<int>("trinf"))+"\n");
                 info.append("Fuerza Emocional:"+QString::number(v.second.get<int>("emoji"))+"\n");
-                ui->G1Datos->setText(info);
+
+                if(glad==1){
+
+                    ui->G1Datos->setText(info);
+                    glad++;
+                    info="";
+                }
+
+                else{
+                    ui->G2Datos->setText(info);
+                    glad=1;
+                    info="";
+                }
             }
         }
     }
@@ -393,8 +408,16 @@ void MainWindow::on_crearmat_clicked()
 {
     cl.send2Server("t");
     leerXML();
-    cl.send2Server("g");
-    leerXML();
+    if(GenOne){
+        cl.send2Server("g");
+        leerXML();
+        GenOne=false;
+    }else{
+        cl.send2Server("G");
+        leerXML();
+    }
+
+
 }
 
 void MainWindow::fillMat()

@@ -178,7 +178,7 @@ void AlgoritmoGenetico::cruzarPoblacion(ListaGladiadores* listaglad) {
 
         }
 
-        Gladiador* nuevoIntegrante = new Gladiador("glad"+ std::to_string(Generation),nuevoGen.to_string());
+        Gladiador* nuevoIntegrante = new Gladiador("glad"+ std::to_string(Generation)+std::to_string(i),nuevoGen.to_string());
         LG->add(nuevoIntegrante);
     }
 
