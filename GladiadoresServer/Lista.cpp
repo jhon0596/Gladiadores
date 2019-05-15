@@ -23,7 +23,7 @@ void Lista::printMe()
     listanodo *current = head;
     while(current != nullptr)
     {
-        std::cout<< current->getData()->getX()<<", "<<current->getData()->getY()<<"->";
+        std::cout<< current->getData()->getX()<<","<<current->getData()->getY();
         current = current->getNext();
     }std::cout<<"// \n";
 }

@@ -4,6 +4,10 @@
 
 #ifndef GLADIADORESSERVER_SIMULACION_H
 #define GLADIADORESSERVER_SIMULACION_H
+#include <string>
+#include <vector>
+#include <functional>
+#include <iostream>
 #include "Gladiador.h"
 #include "Torre.h"
 #include "boost/property_tree/ptree.hpp"
@@ -12,7 +16,9 @@
 #include "matriz.h"
 #include "ListaGladiadores.h"
 #include "AlgoritmoGenetico.h"
-
+#include "backtrack.h"
+#include "AStar.h"
+#include "nodo_matriz.h"
 
 class Simulacion {
 public:
@@ -51,11 +57,21 @@ public:
 
     * */
     void gladiadoresGeneraciones();
+    void crearCaminoBackTrack();
+    void crearCaminoAstar();
+
+
 private:
+    backtrack bac;
+    AStar ast;
     AlgoritmoGenetico vida =AlgoritmoGenetico();
     ListaGladiadores* back = new ListaGladiadores();
-    ListaGladiadores* AStar = new ListaGladiadores();
-    std::string torre,gladiar;
+    ListaGladiadores * astar = new ListaGladiadores();
+    std::string torre,gladiar,backtra,aestre;
+public:
+    std::string &getBack() ;
+    std::vector<std::string> backt;
+     std::string &getAst() ;
 };
 
 

@@ -12,7 +12,7 @@ backtrack::backtrack()
 bool backtrack::findPath(Matriz* matriz, int x, int y, int i, int j)
 {
     clean();
-    std::cout<< "Inicio find Path \n \n";
+    //std::cout<< "Inicio find Path \n \n";
     Nodo_Matriz* start = matriz->getNodo(x,y);
     Nodo_Matriz* end = matriz->getNodo(i-1,j-1);
     std::cout<< "Buscando si hay solucion \n \n";
@@ -43,21 +43,25 @@ bool backtrack::isSolution(Nodo_Matriz* start, Nodo_Matriz* end)
                 if (isSolution(start->getRight(), end))
                 {
                     std::cout<< "Derecha \n \n";
+
                     return true;
                 }
                 else if (isSolution(start->getBottom(), end))
                 {
                     std::cout<< "Abajo \n \n";
+
                     return true;
                 }
                 else if (isSolution(start->getLeft(), end))
                 {
                     std::cout<< "Izquierda \n \n";
+
                     return true;
                 }
                 else if (isSolution(start->getTop(), end))
                 {
                     std::cout<< "Arriba \n \n";
+
                     return true;
                 }
                 /*

@@ -4,7 +4,7 @@
 
 #include "Simulacion.h"
 
-Matriz mat =Matriz(10,10);
+Matriz *mat = new Matriz(10,10);
 int tag=0;
 Simulacion::Simulacion() {
 
@@ -20,10 +20,10 @@ void Simulacion::crearGladiadores() {
     for(int i=0;i<20;i++){
         Gladiador *g1=new Gladiador("glad"+std::to_string(tag));
         tag++;
-        AStar->add(g1);
+        astar->add(g1);
     }
     vida.bubbleSort(back);
-    vida.bubbleSort(AStar);
+    vida.bubbleSort(astar);
 
 
 
@@ -37,7 +37,8 @@ void Simulacion::crearTorres() {
         int ps =t1.getPos()-1;
         bool flag = true;
         while (flag){
-            if(mat.setObstacle(ps/10,ps%10)){
+
+            if( mat->setObstacle(ps/10,ps%10)){
                 lt.add(t1);
                 flag= false;
 
@@ -49,12 +50,13 @@ void Simulacion::crearTorres() {
 
         }
 
+        //bac.printSol();
 
 
 
 
     }
-
+    bac.findPath(mat,0,0,10,10);
 
 
 }
@@ -66,7 +68,7 @@ std::string &Simulacion::getGlad()  {
     Gladiador *disGl;
     for(int i =0;i<2;i++){
         if(LFlag){
-            disGl = AStar->head->getgladiador();
+            disGl = astar->head->getgladiador();
             disGl->display();
             LFlag=false;
         }
@@ -124,5 +126,57 @@ std::string &Simulacion::getTorre()  {
 
 void Simulacion::gladiadoresGeneraciones() {
 vida.cruzarPoblacion(back);
-vida.cruzarPoblacion(AStar);
+vida.cruzarPoblacion(astar);
+}
+
+void Simulacion::crearCaminoBackTrack() {
+    bac.findPath(mat,0,0,10,10);
+
+
+}
+
+void Simulacion::crearCaminoAstar() {
+    ast.findPath(mat,0,0,10,10);
+
+}
+
+ std::string &Simulacion::getBack()  {
+     boost::property_tree::ptree ba;
+     listanodo *tmp=bac.getSolucion()->getHead();
+     ba.put("id","MB");
+
+     for (int i=0;i<bac.getSolucion()->size();i++){
+
+         boost::property_tree::ptree  & node= ba.add("lista.p",tmp->getData()->getX()*10+tmp->getData()->getY()+1);
+        tmp=tmp->getNext();
+
+     }
+
+     std::ostringstream buf;
+     boost::property_tree::write_xml(buf, ba, false);
+     backtra=buf.str();
+     std::cout <<backtra<<std::endl;
+
+
+    return backtra;
+}
+
+ std::string &Simulacion::getAst()  {
+     boost::property_tree::ptree astra;
+     listanodo *tmp=ast.getSolucion()->getHead();
+     astra.put("id","MA");
+
+     for (int i=0;i<ast.getSolucion()->size();i++){
+
+         boost::property_tree::ptree  & node= astra.add("lista.p",tmp->getData()->getX()*10+tmp->getData()->getY()+1);
+         tmp=tmp->getNext();
+
+     }
+
+     std::ostringstream buf;
+     boost::property_tree::write_xml(buf, astra, false);
+     aestre=buf.str();
+     std::cout <<aestre<<std::endl;
+
+    return aestre;
 }
