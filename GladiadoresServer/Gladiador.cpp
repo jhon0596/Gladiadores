@@ -35,6 +35,7 @@ Gladiador::Gladiador(std::string nm) {
 
 
     this->atributos =(int)set18.to_ulong();
+    this->resistencia = calcFitn();
 
 
 
@@ -63,6 +64,7 @@ Gladiador::Gladiador(std::string nm, std::string gen) {
 
 
     this->atributos =(int)set18.to_ulong();
+    this->resistencia = calcFitn();
 
 }
 

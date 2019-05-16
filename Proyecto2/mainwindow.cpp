@@ -397,10 +397,67 @@ void MainWindow::leerXML()
             }
         }
     }
+    else if(cl.propSev.get<std::string>("id")=="MA"){
+           QString info=" ";
+           int pos;
+
+           //aqui debe de ir la info de los gladiadores
+           BOOST_FOREACH( ptree::value_type & v,cl.propSev.get_child("lista")){
+
+               if(v.first=="pos"){
+                   pos=v.second.get<int>("p1");
+                   LA->addinicio(pos);
+               }
+           }
+           movimiento1();
+    }
+    else if(cl.propSev.get<std::string>("id")=="MB"){
+               QString info=" ";
+               int pos;
+
+               //aqui debe de ir la info de los gladiadores
+               BOOST_FOREACH( ptree::value_type & v,cl.propSev.get_child("lista")){
+
+                   if(v.first=="pos"){
+                       pos=v.second.get<int>("p1");
+                       LB->addinicio(pos);
+                   }
+
+                }
+               movimiento2();
+     }
 
 }
 
+void MainWindow::movimiento1(){
+    int posIni,posFin;
+    for (int i=0; i<LA->size;i++){
+        posIni = LA->head->getpos();
+        LA->deleteF();
+        posFin = LA->head->getpos();
+        mover1(posIni,posFin);
+        sleep(2);
+    }
+    LA->head = nullptr;
+    LA->tail = nullptr;
+    LA->size = 0;
 
+}
+
+void MainWindow::movimiento2(){
+    int posIni,posFin;
+    for (int i=0; i<LB->size;i++){
+        posIni = LB->head->getpos();
+        LB->deleteF();
+        posFin = LB->head->getpos();
+        mover1(posIni,posFin);
+        sleep(2);
+    }
+    LB->head = nullptr;
+    LB->tail = nullptr;
+    LB->size = 0;
+
+}
 
 
 

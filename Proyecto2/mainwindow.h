@@ -5,6 +5,7 @@
 #include "QLabel"
 #include "clienthandler.h"
 #include "ventanageneraciones.h"
+#include "listamovimiento.h"
 
 namespace Ui {
 class MainWindow;
@@ -25,6 +26,10 @@ public:
     void addTorre(int pos,int tipo);
     QString getTorre(int caso);
     clientHandler cl;
+    listamovimiento* LB = new listamovimiento;
+    listamovimiento* LA = new listamovimiento;
+    void movimiento1();
+    void movimiento2();
     void leerXML();
     void mover1(int casillaActual, int casillaSiguiente);
         /**

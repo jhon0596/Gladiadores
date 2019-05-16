@@ -9,17 +9,15 @@
 #include <string>
 
 class Torre {
-    public:
+public:
             Torre();
     void  setTorre();
     std::string retClin();
 
-private:
-    int dano,pos,idTor,alcance;
-public:
-    void setPos();
 
-public:
+    int dano,pos,idTor,alcance;
+
+    void setPos();
     int getPos() const;
 
     const std::string &getTipo() const;

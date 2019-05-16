@@ -142,10 +142,13 @@ void Simulacion::crearCaminoAstar() {
 
  std::string &Simulacion::getBack()  {
      boost::property_tree::ptree ba;
-     listanodo *tmp=bac.getSolucion()->getHead();
+     //listanodo *tmp=bac.getSolucion()->getHead();
+
+     Lista* resultado = danoBack(back->head->getgladiador(),bac.getSolucion(),lt);
+     listanodo *tmp = resultado->getHead();
      ba.put("id","MB");
 
-     for (int i=0;i<bac.getSolucion()->size();i++){
+     for (int i=0;i<resultado->size();i++){
 
          boost::property_tree::ptree  & node= ba.add("lista.p",tmp->getData()->getX()*10+tmp->getData()->getY()+1);
         tmp=tmp->getNext();
@@ -163,7 +166,10 @@ void Simulacion::crearCaminoAstar() {
 
  std::string &Simulacion::getAst()  {
      boost::property_tree::ptree astra;
-     listanodo *tmp=ast.getSolucion()->getHead();
+     //listanodo *tmp=ast.getSolucion()->getHead();
+
+     Lista* resultado = danoAStar(astar->head->getgladiador(),ast.getSolucion(),lt);
+     listanodo *tmp = resultado->getHead();
      astra.put("id","MA");
 
      for (int i=0;i<ast.getSolucion()->size();i++){
@@ -179,4 +185,200 @@ void Simulacion::crearCaminoAstar() {
      std::cout <<aestre<<std::endl;
 
     return aestre;
+}
+
+Lista* Simulacion::danoBack(Gladiador* gladiador, Lista* lista, ListaTorres listaT)
+{
+    Nodo_Matriz* nodo;
+    Lista* final = new Lista();
+
+    while (gladiador->resistencia > 0 && lista->getHead()!= nullptr)
+    {
+        nodo = lista->getHead()->getData();
+
+        if (nodo->getTop() != nullptr)
+        {
+            danoAux1(nodo->getTop(), gladiador, listaT);
+            if (nodo->getTop()->getTop() != nullptr)
+            {
+                danoAux2(nodo->getTop()->getTop(), gladiador, listaT);
+            }
+        }
+
+        if (nodo->getRight() != nullptr)
+        {
+            danoAux1(nodo->getRight(), gladiador, listaT);
+            if (nodo->getRight()->getRight() != nullptr)
+            {
+                danoAux2(nodo->getRight()->getRight(), gladiador, listaT);
+            }
+        }
+
+        if (nodo->getLeft() != nullptr)
+        {
+            danoAux1(nodo->getLeft(), gladiador, listaT);
+            if (nodo->getLeft()->getLeft() != nullptr)
+            {
+                danoAux2(nodo->getLeft()->getLeft(), gladiador, listaT);
+            }
+        }
+
+        if (nodo->getBottom() != nullptr)
+        {
+            danoAux1(nodo->getBottom(), gladiador, listaT);
+            if (nodo->getBottom()->getBottom() != nullptr)
+            {
+                danoAux2(nodo->getBottom()->getBottom(), gladiador, listaT);
+            }
+        }
+
+        if (nodo->getDiagTopleft() != nullptr)
+        {
+            danoAux1(nodo->getDiagTopleft(), gladiador, listaT);
+            if (nodo->getDiagTopleft()->getDiagTopleft() != nullptr)
+            {
+                danoAux2(nodo->getDiagTopleft()->getDiagTopleft(), gladiador, listaT);
+            }
+        }
+
+        if (nodo->getDiagTopRight() != nullptr)
+        {
+            danoAux1(nodo->getDiagTopRight(), gladiador, listaT);
+            if (nodo->getDiagTopRight()->getDiagTopRight() != nullptr)
+            {
+                danoAux2(nodo->getDiagTopRight()->getDiagTopRight(), gladiador, listaT);
+            }
+        }
+
+        if (nodo->getDiagBottomleft() != nullptr)
+        {
+            danoAux1(nodo->getDiagBottomleft(), gladiador, listaT);
+            if (nodo->getDiagBottomleft()->getDiagBottomleft() != nullptr)
+            {
+                danoAux2(nodo->getDiagBottomleft()->getDiagBottomleft(), gladiador, listaT);
+            }
+        }
+
+        if (nodo->getDiagBottomRight() != nullptr)
+        {
+            danoAux1(nodo->getDiagBottomRight(), gladiador, listaT);
+            if (nodo->getDiagBottomRight()->getDiagBottomRight() != nullptr)
+            {
+                danoAux2(nodo->getDiagBottomRight()->getDiagBottomRight(), gladiador, listaT);
+            }
+        }
+
+
+        final->enqueue(nodo);
+        lista->dequeue();
+    }
+    return final;
+}
+Lista* Simulacion::danoAStar(Gladiador* gladiador, Lista* lista, ListaTorres listaT)
+{
+    Nodo_Matriz* nodo;
+    Lista* final = new Lista();
+
+    while (gladiador->resistencia > 0 && lista->getTail()!= nullptr)
+    {
+        nodo = lista->getTail()->getData();
+
+        if (nodo->getTop() != nullptr)
+        {
+            danoAux1(nodo->getTop(), gladiador, listaT);
+            if (nodo->getTop()->getTop() != nullptr)
+            {
+                danoAux2(nodo->getTop()->getTop(), gladiador, listaT);
+            }
+        }
+
+        if (nodo->getRight() != nullptr)
+        {
+            danoAux1(nodo->getRight(), gladiador, listaT);
+            if (nodo->getRight()->getRight() != nullptr)
+            {
+                danoAux2(nodo->getRight()->getRight(), gladiador, listaT);
+            }
+        }
+
+        if (nodo->getLeft() != nullptr)
+        {
+            danoAux1(nodo->getLeft(), gladiador, listaT);
+            if (nodo->getLeft()->getLeft() != nullptr)
+            {
+                danoAux2(nodo->getLeft()->getLeft(), gladiador, listaT);
+            }
+        }
+
+        if (nodo->getBottom() != nullptr)
+        {
+            danoAux1(nodo->getBottom(), gladiador, listaT);
+            if (nodo->getBottom()->getBottom() != nullptr)
+            {
+                danoAux2(nodo->getBottom()->getBottom(), gladiador, listaT);
+            }
+        }
+
+        if (nodo->getDiagTopleft() != nullptr)
+        {
+            danoAux1(nodo->getDiagTopleft(), gladiador, listaT);
+            if (nodo->getDiagTopleft()->getDiagTopleft() != nullptr)
+            {
+                danoAux2(nodo->getDiagTopleft()->getDiagTopleft(), gladiador, listaT);
+            }
+        }
+
+        if (nodo->getDiagTopRight() != nullptr)
+        {
+            danoAux1(nodo->getDiagTopRight(), gladiador, listaT);
+            if (nodo->getDiagTopRight()->getDiagTopRight() != nullptr)
+            {
+                danoAux2(nodo->getDiagTopRight()->getDiagTopRight(), gladiador, listaT);
+            }
+        }
+
+        if (nodo->getDiagBottomleft() != nullptr)
+        {
+            danoAux1(nodo->getDiagBottomleft(), gladiador, listaT);
+            if (nodo->getDiagBottomleft()->getDiagBottomleft() != nullptr)
+            {
+                danoAux2(nodo->getDiagBottomleft()->getDiagBottomleft(), gladiador, listaT);
+            }
+        }
+
+        if (nodo->getDiagBottomRight() != nullptr)
+        {
+            danoAux1(nodo->getDiagBottomRight(), gladiador, listaT);
+            if (nodo->getDiagBottomRight()->getDiagBottomRight() != nullptr)
+            {
+                danoAux2(nodo->getDiagBottomRight()->getDiagBottomRight(), gladiador, listaT);
+            }
+        }
+
+
+        final->enqueue(nodo);
+        lista->pop();
+    }
+    return final;
+
+}
+void Simulacion::danoAux1(Nodo_Matriz* nodo, Gladiador* gladiador, ListaTorres listaT)
+{
+    if (nodo->getFlag() == true)
+    {
+        Torre torre = listaT.buscartorre(nodo->getX(), nodo->getY());
+        int resist = gladiador->resistencia - torre.dano;
+        gladiador->resistencia = resist;
+    }
+}
+void Simulacion::danoAux2(Nodo_Matriz* nodo, Gladiador* gladiador, ListaTorres listaT)
+{
+    if (nodo->getFlag() == true)
+    {
+        Torre torre = listaT.buscartorre(nodo->getX(), nodo->getY());
+        if (torre.getTipo() != "1") {
+            int resist = gladiador->resistencia - torre.dano;
+            gladiador->resistencia = resist;
+        }
+    }
 }

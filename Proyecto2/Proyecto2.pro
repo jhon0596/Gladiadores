@@ -15,11 +15,15 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     clienthandler.cpp \
-    ventanageneraciones.cpp
+    ventanageneraciones.cpp \
+    listamovimiento.cpp \
+    nodomovimiento.cpp
 
 HEADERS  += mainwindow.h \
     clienthandler.h \
-    ventanageneraciones.h
+    ventanageneraciones.h \
+    listamovimiento.h \
+    nodomovimiento.h
 
 FORMS    += mainwindow.ui \
     ventanageneraciones.ui

@@ -68,6 +68,10 @@ private:
     ListaGladiadores* back = new ListaGladiadores();
     ListaGladiadores * astar = new ListaGladiadores();
     std::string torre,gladiar,backtra,aestre;
+    Lista* danoBack(Gladiador* gladiador, Lista* lista, ListaTorres listaT);
+    Lista* danoAStar(Gladiador* gladiador, Lista* lista, ListaTorres listaT);
+    void danoAux1(Nodo_Matriz* nodo, Gladiador* gladiador, ListaTorres listaT);
+    void danoAux2(Nodo_Matriz* nodo, Gladiador* gladiador, ListaTorres listaT);
 public:
     std::string &getBack() ;
     std::vector<std::string> backt;

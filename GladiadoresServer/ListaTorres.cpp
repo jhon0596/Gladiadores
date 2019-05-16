@@ -35,6 +35,20 @@ void ListaTorres::deleteF() {
     size--;
 }
 
+Torre ListaTorres::buscartorre(int x, int y){
+    int pos = x*10 + (y + 1);
+    node *temp = head;
+    for(int i = 0; i < size;i++){
+        if(head->gettorre().getPos() == pos){
+            return head->gettorre();
+        }
+        temp = temp->getNext();
+    }
+
+}
+
+
+
 int ListaTorres::getSize() const {
     return size;
 }

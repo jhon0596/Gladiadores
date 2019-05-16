@@ -15,12 +15,13 @@ public:
     void add(Torre i);
     void deleteF();
     node* head,*tail;
+    int getSize() const;
+    void setSize(int size);
+    Torre buscartorre(int x, int y);
 private:
     int size;
-public:
-    int getSize() const;
 
-    void setSize(int size);
+
 };
 
 

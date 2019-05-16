@@ -16,6 +16,7 @@ public:
     std::string display();
 
     int atributos;
+    int resistencia;
 
     std::string unTag;
     int  atributo[5];
